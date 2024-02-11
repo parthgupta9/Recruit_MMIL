@@ -54,7 +54,6 @@ const App = () => {
 <div>
 <BrowserRouter>
 <Routes>
-  <Route path='/' element={<Resume/>}/>
   <Route path='/' element={<Splashscreen/>}/>
   <Route path="/Start" element={<Try/>}/>
   <Route path="/Register" element={<Register/>}/>
