@@ -16,6 +16,20 @@ const App = () => {
     showTickmark(true);
   };
 
+  const [isActive1, setIsActive1] = useState(false);
+
+  function handleActive1() {
+    setIsActive1(true);
+    setIsActive2(false);
+  }
+
+  const [isActive2, setIsActive2] = useState(false);
+
+  function handleActive2() {
+    setIsActive2(true);
+    setIsActive1(false);
+  }
+
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
 
@@ -54,7 +68,7 @@ const App = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "100vw",
+          width: "105vw",
           height: "100vh",
         }}
       />
@@ -67,17 +81,20 @@ const App = () => {
           transform: "translate(-50%, -50%)",
           background:
             "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.8",
-          padding: "20px", // Adjust as needed
+          opacity: "0.6",
+          padding: "10px", // Adjust as needed
+          paddingTop: "20px",
           borderRadius: "10px", // Adjust as needed
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Adjust as needed
+          width: "26rem",
+          height: "18rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
             marginLeft: "70px",
-            marginRight: "70px",
+            marginRight: "40px",
             fontSize: "3rem",
             height: "96px",
             color: "white",
@@ -92,10 +109,10 @@ const App = () => {
             marginLeft: "55px",
             marginRight: "70px",
             fontSize: "2rem",
-            height: "96px",
+            height: "76px",
             color: "white",
             fontStyle: "Montserrat",
-            // marginTop: "-10px",
+            marginTop: "-10px",
           }}
         >
           Choose your year?
@@ -108,13 +125,16 @@ const App = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering1 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive1 ? "#1a1a1a" : "#FFE454",
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
+              color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
               width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
+            onClick={handleActive1}
           >
             1st
           </a>
@@ -124,13 +144,16 @@ const App = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering2 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive2 ? "#1a1a1a" : "#FFE454",
               color: isHovering2 ? "#FFE454" : "#1a1a1a",
+              color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
               width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
+            onClick={handleActive2}
           >
             2nd
           </a>

@@ -51,7 +51,7 @@ const App = () => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           background: 'linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)', // Adjust as needed
-          opacity:'0.8',
+          opacity:'0.6',
           padding: '20px', // Adjust as needed
           borderRadius: '10px', // Adjust as needed
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', // Adjust as needed

@@ -37,7 +37,7 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "100vw",
+          width: "105vw",
           height: "100vh",
         }}
       />
@@ -49,21 +49,23 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.8",
-          padding: "20px",
+          opacity: "0.6",
+          padding: "10px",
+          paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+          width: "26rem",
+          height: "18rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "80px",
-            marginRight: "70px",
+            marginLeft: "70px",
+            marginRight: "40px",
             fontSize: "47px",
             height: "90px",
             color: "white",
-
             // width:'320px',
             fontStyle: "Montserrat",
           }}
@@ -73,7 +75,7 @@ const Name = () => {
         <p
           style={{
             display: 'block',
-            marginLeft: "105px",
+            marginLeft: "95px",
             marginRight: "70px",
             fontSize: "24px",
             color: "white",

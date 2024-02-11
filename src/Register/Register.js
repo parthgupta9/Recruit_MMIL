@@ -43,7 +43,7 @@ const App = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: '100vw',
+          width: '105vw',
           height: '100vh',
         }}
       />
@@ -55,11 +55,11 @@ const App = () => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           background: 'linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)', // Adjust as needed
-          opacity:'0.8',
+          opacity:'0.6',
           padding: '20px', 
           borderRadius: '10px', 
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', 
-          // width:'26rem'
+          width:'26rem'
         }}
       >
         {/* Your card content goes here */}
@@ -118,14 +118,14 @@ const App = () => {
           }}>Click here</button></li>
         </ul>
       </div>
-      <div class="dropdown" style={{marginTop:'20px'}}>
+      <div class="dropup" style={{marginTop:'20px'}}>
         <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'100px',
        backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem'}}>
           <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 3</p>
           
           <p style={{marginTop:'-23px',fontSize:'22px', fontWeight: 'bolder'}}> HR Round</p>
       
-          <p style={{marginTop:'-15px',fontSize:'10px'}}>Personal interview and HR interview round to check your personality and coordination skills.</p>
+          <p style={{marginTop:'-15px',fontSize:'10px'}}>Personal interview and HR interview round to check your <br /> personality and coordination skills.</p>
           <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
         </button>
 
