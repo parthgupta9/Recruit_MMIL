@@ -20,6 +20,35 @@ const Name = () => {
     showTickmark(true)
   };
 
+  const [isActive1, setIsActive1] = useState(false);
+  const [isActive2, setIsActive2] = useState(false);
+  const [isActive3, setIsActive3] = useState(false);
+  const [isActive4, setIsActive4] = useState(false);
+
+  function handleActive1() {
+    setIsActive1(true);
+    setIsActive2(false);
+    setIsActive3(false);
+    setIsActive4(false);
+  }
+  function handleActive2() {
+    setIsActive2(true);
+    setIsActive1(false);
+    setIsActive3(false);
+    setIsActive4(false);
+  }
+  function handleActive3() {
+    setIsActive3(true);
+    setIsActive1(false);
+    setIsActive2(false);
+    setIsActive4(false);
+  }
+  function handleActive4() {
+    setIsActive4(true);
+    setIsActive1(false);
+    setIsActive2(false);
+    setIsActive3(false);
+  }
   
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -106,7 +135,7 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "100vw",
+          width: "105vw",
           height: "100vh",
         }}
       />
@@ -118,17 +147,20 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.8",
-          padding: "20px",
+          opacity: "0.6",
+          padding: "10px",
+          paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+          width: "26rem",
+          height: "28rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "80px",
-            marginRight: "70px",
+            marginLeft: "70px",
+            marginRight: "40px",
             fontSize: "47px",
             height: "90px",
             color: "white",
@@ -141,8 +173,8 @@ const Name = () => {
         <p
           style={{
             display: 'block',
-            marginLeft: "115px",
-            marginRight: "70px",
+            marginLeft: "90px",
+            marginRight: "65px",
             fontSize: "24px",
             color: "white",
             fontStyle: "Montserrat",
@@ -159,13 +191,16 @@ const Name = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering1 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive1 ? "#1a1a1a" : "#FFE454",
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
+              color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
             //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
+            onClick={handleActive1}
           >
             Design
           </a>
@@ -176,13 +211,16 @@ const Name = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering2 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive2 ? "#1a1a1a" : "#FFE454",
               color: isHovering2 ? "#FFE454" : "#1a1a1a",
+              color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
             //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
+            onClick={handleActive2}
           >
             Programming
           </a>
@@ -193,13 +231,16 @@ const Name = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering3 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive3 ? "#1a1a1a" : "#FFE454",
               color: isHovering3 ? "#FFE454" : "#1a1a1a",
+              color: isActive3 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
             //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter3}
             onMouseLeave={handleMouseLeave3}
+            onClick={handleActive3}
           >
             Web-Dev
           </a>
@@ -210,13 +251,16 @@ const Name = () => {
             style={{
               border: "2px solid #FFE454",
               backgroundColor: isHovering4 ? "#1a1a1a" : "#FFE454",
+              backgroundColor: isActive4 ? "#1a1a1a" : "#FFE454",
               color: isHovering4 ? "#FFE454" : "#1a1a1a",
+              color: isActive4 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
             //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter4}
             onMouseLeave={handleMouseLeave4}
+            onClick={handleActive4}
           >
             Android-Dev
           </a>
