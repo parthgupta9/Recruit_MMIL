@@ -3,6 +3,7 @@ import Resume from './Resume/Resume'
 import FirstSlide from './ques/FirstSlide'
 import Splashscreen from './splashscreen/Splashscreen'
 import Try from './splashscreen/Try'
+import Rocket from './Rocket/Rocket'
 import Register from './Register/Register'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Name from './Namw/Name'
@@ -56,6 +57,7 @@ const App = () => {
 <Routes>
   <Route path='/' element={<Splashscreen/>}/>
   <Route path="/Start" element={<Try/>}/>
+  <Route path="/Rocket" element={<Rocket/>}/>
   <Route path="/Register" element={<Register/>}/>
   <Route path="/First" element={<FirstSlide onSaveYear={handleYearChange}/>}></Route>
   <Route path="/Name" element={<Name onSaveName={handleNameChange}/>}></Route>
