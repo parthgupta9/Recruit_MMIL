@@ -8,10 +8,7 @@ body {
   font-family: 'Lato', sans-serif;
   background-color: white, #f7f7f7;
 }
-h1, h2, h3, h4, h5, h6, p{
-  letter-spacing: 1px;
-  text-align: center;
-}
+
 .dropzone {
   display: flex;
   flex-direction: column;
@@ -24,11 +21,5 @@ h1, h2, h3, h4, h5, h6, p{
 
 .active {
   background-color: #5f5959;
-}
-
-button {
-  padding: 1rem;
-  margin: 1rem;
-  font-size: medium;
 }
 
