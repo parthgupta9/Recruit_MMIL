@@ -1,0 +1,30 @@
+
+#rocket{
+    /* position: absolute;    
+    top: 75%;
+    left: 95%; */
+     transform: translateY(-50%);
+    animation: slideUpper 0.5s ease-in-out 3s forwards;
+  }
+  #smoke {
+    /* position: absolute;
+    top: 100%;
+    left: 70%; */
+    transform: translateY(-10%);
+    animation: slideUp 0.5s ease-in-out 3s forwards;
+  }
+  .moveUp{
+    animation: slideUp 0.5s ease-in-out 3s forwards;
+    /* animation-delay: 0.5s; */
+  }
+
+  @keyframes slideUpper {
+    to {
+      transform: translateY(-500%);
+    }
+  }
+  @keyframes slideUp {
+    to {
+      transform: translateY(-80%);
+    }
+  }
