@@ -1,20 +1,17 @@
 #rocket {
   position: absolute;
-  top: 100%;
-  left: 256%;
-  /* transform: translateY(-50%); */
+  top: 40vh;
+  left: 58.7vw;
   animation: slideUpper 0.5s ease-in-out 0.5s forwards;
 }
 #smoke {
   position: absolute;
-  top: 135%;
-  left: 125%;
-  /* transform: translateY(-10%); */
+  top: 52vh;
+  left: 59.5vh;
   animation: slideUp 0.5s ease-in-out 0.5s forwards;
 }
 .moveUp {
   animation: slideUp 0.5s ease-in-out 0.5s forwards;
-  /* animation-delay: 0.5s; */
 }
 
 @keyframes slideUpper {
@@ -29,11 +26,14 @@
 }
 
 @media (max-width: 768px) {
-  .container {
-    padding: 0 20px;
+  #rocket{
+    position: absolute;
+    top: 49vh;
+    left: 81.5vw;
   }
-
-  .box {
-    height: 150px;
+  #smoke{
+    position: absolute;
+    top: 62vh;
+    left: -30vw;
   }
 }

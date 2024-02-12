@@ -38,7 +38,7 @@ const App = () => {
       }, 1500); // Adjust this delay as needed to match your animation duration
     }
   }, [isClicked, navigate]);
-//  } });
+  //  } });
 
   return (
     <div style={{ position: "relative" }}>
@@ -65,12 +65,11 @@ const App = () => {
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
         }}
       >
-        {isClicked && (<img src={rocketImg} id="rocket" className="" alt="Rocket" 
-        />
+        {isClicked && (
+          <img src={rocketImg} id="rocket" className="" alt="Rocket" />
         )}
         {isClicked && (
-          <img src={smokeImg} id="smoke" className="moveUp" alt="Smoke"
-          />
+          <img src={smokeImg} id="smoke" className="moveUp" alt="Smoke" />
         )}
 
         <h2
