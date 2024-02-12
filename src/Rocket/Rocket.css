@@ -1,30 +1,39 @@
+#rocket {
+  position: absolute;
+  top: 100%;
+  left: 256%;
+  /* transform: translateY(-50%); */
+  animation: slideUpper 0.5s ease-in-out 0.5s forwards;
+}
+#smoke {
+  position: absolute;
+  top: 135%;
+  left: 125%;
+  /* transform: translateY(-10%); */
+  animation: slideUp 0.5s ease-in-out 0.5s forwards;
+}
+.moveUp {
+  animation: slideUp 0.5s ease-in-out 0.5s forwards;
+  /* animation-delay: 0.5s; */
+}
 
-#rocket{
-    /* position: absolute;    
-    top: 75%;
-    left: 95%; */
-     transform: translateY(-50%);
-    animation: slideUpper 0.5s ease-in-out 3s forwards;
+@keyframes slideUpper {
+  to {
+    transform: translateY(-500%);
   }
-  #smoke {
-    /* position: absolute;
-    top: 100%;
-    left: 70%; */
-    transform: translateY(-10%);
-    animation: slideUp 0.5s ease-in-out 3s forwards;
+}
+@keyframes slideUp {
+  to {
+    transform: translateY(-80%);
   }
-  .moveUp{
-    animation: slideUp 0.5s ease-in-out 3s forwards;
-    /* animation-delay: 0.5s; */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
   }
 
-  @keyframes slideUpper {
-    to {
-      transform: translateY(-500%);
-    }
+  .box {
+    height: 150px;
   }
-  @keyframes slideUp {
-    to {
-      transform: translateY(-80%);
-    }
-  }
+}

@@ -56,9 +56,10 @@ const App = () => {
 <BrowserRouter>
 <Routes>
   <Route path='/' element={<Splashscreen/>}/>
-  <Route path="/Start" element={<Try/>}/>
+  {/* <Route path="/Start" element={<Try/>}/> */}
   <Route path="/Rocket" element={<Rocket/>}/>
   <Route path="/Register" element={<Register/>}/>
+  <Route path="/Resume" element={<Resume/>}/>
   <Route path="/First" element={<FirstSlide onSaveYear={handleYearChange}/>}></Route>
   <Route path="/Name" element={<Name onSaveName={handleNameChange}/>}></Route>
   <Route path="/RollNo" element={<RollNo onSaveRollNo={handleRollNoChange}/>}></Route>

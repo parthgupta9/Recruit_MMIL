@@ -5,6 +5,7 @@ import image from '../images/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_20
 import '../splashscreen/Splashscreen.css';
 
 import Try from '../splashscreen/Try'
+import Rocket from '../Rocket/Rocket'
 import { Link } from 'react-router-dom';
 const Splashscreen = ({ onSplashComplete }) => {
   useEffect(() => {
@@ -29,7 +30,7 @@ const Splashscreen = ({ onSplashComplete }) => {
       </div>
 
     </div>
-   <Try/>
+   <Rocket/>
    </>
   );
 };

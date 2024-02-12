@@ -35,7 +35,7 @@ const App = () => {
       setTimeout(() => {
         // Navigate to register route after animation completes
         navigate("/Register");
-      }, 4000); // Adjust this delay as needed to match your animation duration
+      }, 1500); // Adjust this delay as needed to match your animation duration
     }
   }, [isClicked, navigate]);
 //  } });
@@ -66,20 +66,10 @@ const App = () => {
         }}
       >
         {isClicked && (<img src={rocketImg} id="rocket" className="" alt="Rocket" 
-        style={{
-            position: "absolute",
-            top: "135%",
-            left: "256%",
-        }}
         />
         )}
         {isClicked && (
           <img src={smokeImg} id="smoke" className="moveUp" alt="Smoke"
-          style={{
-            position: "absolute",
-            top: "135%",
-            left: "125%",            
-          }}
           />
         )}
 
