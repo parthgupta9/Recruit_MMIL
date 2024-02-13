@@ -1,39 +1,28 @@
-// Splashscreen.js
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import vector from '../assets/Vector.png';
 import image from '../images/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 1.png';
 import '../splashscreen/Splashscreen.css';
 
-import Try from '../splashscreen/Try'
-import Rocket from '../Rocket/Rocket'
-import { Link } from 'react-router-dom';
-const Splashscreen = ({ onSplashComplete }) => {
+const Splashscreen = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
-    const handleComplete = () => {
-      if (typeof onSplashComplete === 'function') {
-        onSplashComplete();
-      }
-    };
-
-    setTimeout(handleComplete, 5000);
-
-    // Cleanup function to clear the timeout in case the component unmounts before the timeout is reached
-    return () => clearTimeout(handleComplete);
-  }, [onSplashComplete]);
+    const timeout = setTimeout(() => {
+      navigate('/Rocket');
+    }, 3000); 
+    
+    return () => clearTimeout(timeout);
+  }, [navigate]);
 
   return (
-   <>
-    <div className='splash' >
+    <div className='splash'>
       <div className="cover">
         <img src={vector} className="icon" alt="" />
         <img src={image} className="icon" id="static-icon" alt="" />
       </div>
-
     </div>
-   <Rocket/>
-   </>
   );
 };
 
 export default Splashscreen;
-
