@@ -97,7 +97,7 @@ const Name = () => {
           }}
         >
           <input
-            class="form"
+            className="form"
             style={{
               width: "100%",
               border: "none",

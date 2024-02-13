@@ -68,8 +68,8 @@ const App = () => {
             fontStyle:'Montserrat',marginLeft:'140px',marginBottom:'30px',color:'white'
 
         }}> Rounds  </h2>
-          <div class="dropdown" >
-        <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
+          <div className="dropdown" >
+        <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
        backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem'}}>
           <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 1</p>
           
@@ -79,7 +79,7 @@ const App = () => {
           <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
         </button>
 
-        <ul class="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem',marginTop:'0px'
         }}>
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The students has to go to unstop.com. 
@@ -93,8 +93,8 @@ const App = () => {
           }}>Click here</button></li>
         </ul>
       </div>
-      <div class="dropdown" style={{marginTop:'20px'}}>
-        <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
+      <div className="dropdown" style={{marginTop:'20px'}}>
+        <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
        backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem'}}>
           <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 2</p>
           
@@ -104,7 +104,7 @@ const App = () => {
           <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
         </button>
 
-        <ul class="dropdown-menu" style={{ backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem',marginTop:'0px'
         }}>
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Pay attention to details and follow the instructions provided.
@@ -118,8 +118,8 @@ const App = () => {
           }}>Click here</button></li>
         </ul>
       </div>
-      <div class="dropup" style={{marginTop:'20px'}}>
-        <button class="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'100px',
+      <div className="dropup" style={{marginTop:'20px'}}>
+        <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'100px',
        backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem'}}>
           <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 3</p>
           
@@ -129,7 +129,7 @@ const App = () => {
           <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
         </button>
 
-        <ul class="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
         }}>
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.

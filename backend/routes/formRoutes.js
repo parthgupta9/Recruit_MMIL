@@ -27,6 +27,7 @@ routes.post('/name', async (req, res) => {
 
         const user = new MMIL({ name, email, year, rollNo });
         await user.save();
+        console.log(name);
 
         res.status(201).json({ message: "Successfully registered" });
     } catch (err) {

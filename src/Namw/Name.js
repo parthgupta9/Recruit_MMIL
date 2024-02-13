@@ -130,7 +130,7 @@ const Name = () => {
           }}
         >
           <input
-            class="form"
+            className="form"
             formMethod="POST"
             style={{
               width: "100%",

@@ -15,7 +15,7 @@ const Splashscreen = ({ onSplashComplete }) => {
       }
     };
 
-    setTimeout(handleComplete, 3000);
+    setTimeout(handleComplete, 5000);
 
     // Cleanup function to clear the timeout in case the component unmounts before the timeout is reached
     return () => clearTimeout(handleComplete);
