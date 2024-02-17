@@ -96,7 +96,7 @@ const Name = () => {
             top: "-12%",
             left: "30%",
             width: "42%",
-            height: "28%",
+            height: "27%",
             opacity: 0.9, 
           }}
         />
