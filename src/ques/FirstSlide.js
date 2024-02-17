@@ -72,7 +72,7 @@ const App = () => {
         alt="Your Image"
         style={{
           width: "105vw",
-          height: "100vh",
+          height: "105vh",
         }}
       />
 

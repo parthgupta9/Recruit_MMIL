@@ -44,7 +44,7 @@ const App = () => {
         alt="Your Image"
         style={{
           width: '105vw',
-          height: '100vh',
+          height: '105vh',
         }}
       />
  
@@ -81,12 +81,12 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem',marginTop:'0px'
         }}>
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The students has to go to unstop.com. 
+        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'60px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The students has to go to unstop.com. 
       </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Only the registered student's result will be evaluated. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The student has to submit the test in the given time.</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The link to the test is provided below.png </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>Only the registered student's result will be evaluated. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The student has to submit the test in the given time.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The link to the test is provided below.png </li>
           <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'145px', height: '35px'}}></img> </li>
           <li> <button style={{
            width:'16rem',marginLeft:'60px',marginTop:'20px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'20px'
@@ -106,12 +106,12 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem',marginTop:'0px'
         }}>
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Pay attention to details and follow the instructions provided.
+        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'60px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>Pay attention to details and follow the instructions provided.
       </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}> Use this opportunity to showcase your skills and approach to problem-solving. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The students has to complete the task in before the deadline. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>The link to.png </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}> Use this opportunity to showcase your skills and approach to problem-solving. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The students has to complete the task in before the deadline. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The link to.png </li>
           {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
           <li> <button style={{
            width:'16rem',marginLeft:'60px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
@@ -131,13 +131,13 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
         }}>
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
+        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
       </li>
 
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}> interviewer will focus on different aspects of your skills and experience. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Be ready to discuss specific examples from your past experience that demonstrate your skills,problem-solving abilities, and teamwork.</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'100px'}}>Please have a copy of your resume for reference.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}> interviewer will focus on different aspects of your skills and experience. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Be ready to discuss specific examples from your past experience that demonstrate your skills,problem-solving abilities, and teamwork.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Please have a copy of your resume for reference.</li>
           {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
           <li> <button style={{
            width:'16rem',marginLeft:'60px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
@@ -164,7 +164,7 @@ const App = () => {
       <button
         style={{
           position: 'absolute',
-          bottom: '20px',
+          bottom: '50px',
           left: '50%',
           transform: 'translateX(-50%)',
           padding: '10px',

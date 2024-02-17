@@ -32,7 +32,7 @@ const Name = () => {
         alt="Your Image"
         style={{
           width: "110vw",
-          height: "102vh",
+          height: "105vh",
         }}
       />
 
@@ -56,7 +56,7 @@ const Name = () => {
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "70px",
+            marginLeft: "50px",
             marginRight: "40px",
             fontSize: "47px",
             height: "90px",
@@ -70,13 +70,13 @@ const Name = () => {
        style={{
         height: '180px',
         marginTop: '-22px',
-        marginLeft: '140px',
+        marginLeft: '120px',
         marginBottom: '12px'
        }}
        />
        <p
        style={{
-        marginLeft: "115px",
+        marginLeft: "105px",
         marginRight: "70px",
         fontSize: "24px",
         color: "white",
@@ -93,10 +93,10 @@ const Name = () => {
           style={{
             position: "absolute",
             marginTop: "-20%",
-            top: "-20%",
+            top: "-12%",
             left: "30%",
-            width: "40%",
-            height: "34%",
+            width: "42%",
+            height: "28%",
             opacity: 0.9, 
           }}
         />
