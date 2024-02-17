@@ -3,6 +3,7 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
+import globalData from '../Global';
 
 const Name = () => {
   const [windowSize, setWindowSize] = useState({
@@ -49,7 +50,7 @@ const Name = () => {
     setIsActive2(false);
     setIsActive3(false);
   }
-  
+
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
   const [isHovering3, setIsHovering3] = useState(false);
@@ -183,8 +184,8 @@ const Name = () => {
         >
           Choose your domain ?
         </p>
-       
-        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column",alignItems: "center" }}>
+
+        <div style={{ display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
           <a
             href="#"
             className="btn"
@@ -195,7 +196,7 @@ const Name = () => {
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
               color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
-            //   width: "80px",
+              //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
@@ -215,7 +216,7 @@ const Name = () => {
               color: isHovering2 ? "#FFE454" : "#1a1a1a",
               color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
-            //   width: "80px",
+              //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
@@ -235,7 +236,7 @@ const Name = () => {
               color: isHovering3 ? "#FFE454" : "#1a1a1a",
               color: isActive3 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
-            //   width: "80px",
+              //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter3}
@@ -255,7 +256,7 @@ const Name = () => {
               color: isHovering4 ? "#FFE454" : "#1a1a1a",
               color: isActive4 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
-            //   width: "80px",
+              //   width: "80px",
             }}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter4}
@@ -266,21 +267,56 @@ const Name = () => {
           </a>
         </div>
 
-        <Link
-          to="/Congrats"
+        {/* <Link
+          to="/Resume"
           style={{
             display: "inline-block",
             marginLeft: "40%",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
-        >
-          <img
-            src={tick}
-            alt=""
+        > */}
+
+        {globalData.myGlobalVariable === '1st year' ? (
+          <Link
+            to="/Congrats"
+          >
+            <img
+              src={tick}
+              alt=""
+              style={{
+                display: "inline-block",
+                marginLeft: "40%",
+                marginTop: "24px",
+                opacity: tickmark ? '1' : '0',
+              }}
             // onClick={Postdata}
-          ></img>
-        </Link>
+            ></img>
+          </Link>
+        ) :(
+          <Link
+            to="/Resume"
+          >
+            <img
+              src={tick}
+              alt=""
+              style={{
+                display: "inline-block",
+                marginLeft: "40%",
+                marginTop: "24px",
+                opacity: tickmark ? '1' : '0',
+              }}
+            // onClick={Postdata}
+            ></img>
+          </Link>
+        )}
+
+        {/* <img
+          src={tick}
+          alt=""
+        // onClick={Postdata}
+        ></img> */}
+        {/* </Link> */}
 
         <img
           src={mmil}
@@ -292,11 +328,11 @@ const Name = () => {
             left: "30%",
             width: "40%",
             height: "20%",
-            opacity: 1, 
+            opacity: 1,
           }}
         />
       </div>
-    </div>
+    </div >
   );
 };
 

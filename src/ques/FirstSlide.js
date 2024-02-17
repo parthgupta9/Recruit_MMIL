@@ -3,6 +3,7 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
+import globalData from '../Global';
 
 const App = () => {
   const [windowSize, setWindowSize] = useState({
@@ -21,6 +22,7 @@ const App = () => {
   function handleActive1() {
     setIsActive1(true);
     setIsActive2(false);
+    globalData.myGlobalVariable = '1st year';
   }
 
   const [isActive2, setIsActive2] = useState(false);
@@ -28,6 +30,7 @@ const App = () => {
   function handleActive2() {
     setIsActive2(true);
     setIsActive1(false);
+    globalData.myGlobalVariable = '2nd year';
   }
 
   const [isHovering1, setIsHovering1] = useState(false);
