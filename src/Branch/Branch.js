@@ -3,8 +3,15 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
+import { useUser } from '../Context';
 
 const Name = () => {
+  const { userData, setUserData } = useUser();
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, branch: e.target.value });
+  };
+
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -115,6 +122,8 @@ const Name = () => {
               color: "white",
             }}
             type="text"
+            value={userData.branch}
+            onChange={handleChange}
             onFocus={handleShowTickmark}
             placeholder="Text here"
             aria-label="type here"
