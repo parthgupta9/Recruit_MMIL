@@ -4,23 +4,22 @@ import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_202
 import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
-import { useUser } from '../Context';
-
 
 const App = () => {
-
-  const { userData, setUserData } = useUser();
-
-  const handleYearChange = (year) => {
-    setUserData({ ...userData, year });
-  };
-
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
   const [tickmark, showTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const handleShowTickmark = (e) => {
     showTickmark(true);
@@ -93,7 +92,7 @@ const App = () => {
           transform: "translate(-50%, -50%)",
           background:
             "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px", // Adjust as needed
           paddingTop: "20px",
           borderRadius: "10px", // Adjust as needed
@@ -143,11 +142,10 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
-            onClick={() => handleYearChange(1)}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
-            // onClick={handleActive1}
+            onClick={handleActive1}
           >
             1st
           </a>
@@ -163,11 +161,10 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
-            onClick={() => handleYearChange(2)}
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
-            // onClick={handleActive2}
+            onClick={handleActive2}
           >
             2nd
           </a>
@@ -177,11 +174,18 @@ const App = () => {
           style={{
             display: "inline-block",
             marginLeft: "40%",
-            marginTop: "24px",
+            marginTop: "18px",
             opacity: tickmark ? '1' : '0',
           }}
         >
-          <img src={tick} alt=""></img>
+          <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
         </Link>
         <img
           src={mmil}

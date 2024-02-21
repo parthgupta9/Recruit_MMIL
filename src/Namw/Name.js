@@ -3,25 +3,60 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
-import { useUser } from '../Context';
-
 
 const Name = () => {
-
-  const { userData, setUserData } = useUser();
-
-  const handleChange = (e) => {
-    setUserData({ ...userData, name: e.target.value });
-  };
-
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  const [user, setUser] = useState({
+    name: " ",
+  });
+
   const [tickmark, showTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const handleShowTickmark = (e) => {
     showTickmark(true)
+  };
+
+  const Postdata = async (e) => {
+    e.preventDefault();
+    const { name } = user;
+
+    const res = await fetch("/name", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.status === 422 || !data) {
+      window.alert("Invalid Registration");
+    } else {
+      window.alert("Registration Successfull");
+    }
+  };
+
+  let name, value;
+  const handleInputs = (e) => {
+    console.log(e);
+    name = e.target.name;
+    value = e.target.value;
+
+    setUser({ ...user, [name]: value });
   };
 
   const updateWindowSize = () => {
@@ -56,7 +91,7 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
@@ -65,6 +100,7 @@ const Name = () => {
           height: "18rem"
         }}
       >
+        {/* Your card content goes here */}
         <h2
           style={{
             marginLeft: "70px",
@@ -103,6 +139,7 @@ const Name = () => {
         >
           <input
             className="form"
+            formMethod="POST"
             style={{
               width: "100%",
               border: "none",
@@ -111,9 +148,9 @@ const Name = () => {
               padding: "6px",
               color: "white",
             }}
-            value={userData.name}
-            onChange={handleChange}
             type="text"
+            // value={user.name}
+            onChange={handleInputs}
             onFocus={handleShowTickmark}
             placeholder="Text here"
             aria-label="type here"
@@ -128,11 +165,14 @@ const Name = () => {
             opacity: tickmark ? '1' : '0',
           }}
         >
-          <img
-            src={tick}
-            alt=""
-           
-          ></img>
+             <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
         </Link>
 
         <img

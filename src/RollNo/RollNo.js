@@ -3,23 +3,22 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
-import { useUser } from '../Context';
-
 
 const Name = () => {
-
-  const { userData, setUserData } = useUser();
-
-  const handleChange = (e) => {
-    setUserData({ ...userData, rollNo:e.target.value });
-  };
-
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
   const [tickmark, showTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const handleShowTickmark = (e) => {
     showTickmark(true)
@@ -58,7 +57,7 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
@@ -116,24 +115,30 @@ const Name = () => {
               color: "white",
           }}
           type="text"
-          value={userData.rollNo}
-          onChange={handleChange}
           placeholder="Text here"
           onFocus={handleShowTickmark}
           aria-label="type here"
         />
         </div>
 
-          <Link to="/Branch">
-            <img src={tick} alt=""
-            style={{
-              display: "inline-block",
-              marginLeft: "40%",
-              marginTop: "24px",
-              opacity: tickmark ? '1' : '0',
-            }}
-            ></img>
-          </Link>
+        <Link
+          to="/Branch"
+          style={{
+            display: "inline-block",
+            marginLeft: "40%",
+            marginTop: "24px",
+            opacity: tickmark ? '1' : '0',
+          }}
+        >
+             <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
+        </Link>
 
         <img
           src={mmil}
