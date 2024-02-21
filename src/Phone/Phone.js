@@ -15,6 +15,14 @@ const Name = () => {
   });
 
   const [tickmark, showTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const handleShowTickmark = (e) => {
     showTickmark(true)
@@ -83,7 +91,7 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
@@ -157,11 +165,14 @@ const Name = () => {
             opacity: tickmark ? '1' : '0',
           }}
         >
-          <img
-            src={tick}
-            alt=""
-            // onClick={Postdata}
-          ></img>
+          <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
         </Link>
 
         <img

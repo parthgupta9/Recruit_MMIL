@@ -59,7 +59,7 @@ const App = () => {
           transform: "translate(-50%, -50%)",
           background:
             "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)",
-          opacity: "0.8",
+          opacity: "1",
           padding: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
@@ -86,8 +86,8 @@ const App = () => {
         </h2>
         <p
           style={{
-            marginLeft: "55px",
-            marginRight: "70px",
+            marginLeft: "45px",
+            marginRight: "35px",
             fontSize: "2rem",
             height: "96px",
             color: "white",
@@ -106,6 +106,9 @@ const App = () => {
             marginLeft: "70px",
             marginTop: "-10px",
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={handleStartClick}
         >
           <Link
             to="#"
@@ -114,9 +117,6 @@ const App = () => {
               color: "#009A0F",
               color: isHovering ? "#FFE454" : "#009A0F",
             }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={handleStartClick}
           >
             START
           </Link>

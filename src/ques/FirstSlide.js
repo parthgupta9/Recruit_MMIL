@@ -12,6 +12,14 @@ const App = () => {
   });
 
   const [tickmark, showTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const handleShowTickmark = (e) => {
     showTickmark(true);
@@ -84,7 +92,7 @@ const App = () => {
           transform: "translate(-50%, -50%)",
           background:
             "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px", // Adjust as needed
           paddingTop: "20px",
           borderRadius: "10px", // Adjust as needed
@@ -166,11 +174,18 @@ const App = () => {
           style={{
             display: "inline-block",
             marginLeft: "40%",
-            marginTop: "24px",
+            marginTop: "18px",
             opacity: tickmark ? '1' : '0',
           }}
         >
-          <img src={tick} alt=""></img>
+          <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
         </Link>
         <img
           src={mmil}

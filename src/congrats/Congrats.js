@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
+// import tick from "../assets/tick.svg";
 import tick from "../assets/Frame 13.png";
 import astronomer from '../assets/cute-astronaut-waving-hand-to-show-peace-symbol-cartoon-icon-illustration-vector 1.png'
 import { Link } from "react-router-dom";
@@ -44,7 +45,7 @@ const Name = () => {
           transform: "translate(-50%, -50%)",
           background:
             "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
