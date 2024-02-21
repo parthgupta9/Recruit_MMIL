@@ -9,9 +9,7 @@ import { useUser } from '../Context';
 const App = () => {
   const { userData, setUserData } = useUser();
 
-  const handleYearChange = (year) => {
-    setUserData({ ...userData, year });
-  };
+  
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
@@ -38,6 +36,7 @@ const App = () => {
     setIsActive1(true);
     setIsActive2(false);
     globalData.myGlobalVariable = '1st year';
+    setUserData({ ...userData, year:"1st" });
   }
 
   const [isActive2, setIsActive2] = useState(false);
@@ -46,6 +45,7 @@ const App = () => {
     setIsActive2(true);
     setIsActive1(false);
     globalData.myGlobalVariable = '2nd year';
+    setUserData({ ...userData, year:"2nd" });
   }
 
   const [isHovering1, setIsHovering1] = useState(false);
@@ -149,11 +149,11 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
-            onClick={() => handleYearChange(1)}
+            
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
-            // onClick={handleActive1}
+            onClick={handleActive1}
           >
             1st
           </a>
@@ -169,11 +169,11 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
-            onClick={() => handleYearChange(2)}
+           
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
-            // onClick={handleActive2}
+            onClick={handleActive2}
           >
             2nd
           </a>
