@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
 import { useUser } from '../Context';
+import '../phone.css';
 
 const App = () => {
   const { userData, setUserData } = useUser();
-
-  
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
@@ -104,19 +103,20 @@ const App = () => {
           paddingTop: "20px",
           borderRadius: "10px", // Adjust as needed
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Adjust as needed
-          width: "26rem",
+          width: "22rem",
           height: "18rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "70px",
-            marginRight: "40px",
+            textAlign: "center",
             fontSize: "3rem",
-            height: "96px",
+            marginBottom: "8%",
             color: "white",
             fontStyle: "Montserrat",
+            fontWeight: "bold",
+            letterSpacing: "1.5px"
           }}
         >
           LET'S BEGIN
@@ -124,13 +124,12 @@ const App = () => {
         <p
           style={{
             display: "block",
-            marginLeft: "55px",
-            marginRight: "70px",
+            // textAlign: "center",
             fontSize: "2rem",
-            height: "76px",
+            // height: "76px",
             color: "white",
             fontStyle: "Montserrat",
-            marginTop: "-10px",
+            // marginTop: "-10px",
           }}
         >
           Choose your year?

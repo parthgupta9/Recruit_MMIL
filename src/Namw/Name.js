@@ -53,11 +53,11 @@ const Name = () => {
   return (
     <div style={{ position: "relative" }}>
       <img
-         src={windowSize.width <= 900 ? appbg : bg}
+         src={windowSize.width <= 360 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "105vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -73,20 +73,16 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "26rem",
-          height: "18rem"
+          width: "22rem",
+          height: "17rem"
         }}
       >
-        {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "70px",
-            marginRight: "40px",
             fontSize: "47px",
-            height: "90px",
+            marginTop: "10px",
+            marginBottom: "22px",
             color: "white",
-            // width:'320px',
-            fontStyle: "Montserrat",
           }}
         >
           LET'S BEGIN!
@@ -94,12 +90,8 @@ const Name = () => {
         <p
           style={{
             display: 'block',
-            marginLeft: "90px",
-            marginRight: "70px",
             fontSize: "24px",
             color: "white",
-            fontStyle: "Montserrat",
-            // marginTop: "-10px",
           }}
         >
           What is your name ?
@@ -110,7 +102,7 @@ const Name = () => {
             borderRadius: "12px",
             padding: "6px",
             width: "75%",
-            marginLeft: "55px",
+            margin: "auto",
             marginTop: "8px",
           }}
         >
@@ -137,7 +129,7 @@ const Name = () => {
           to="/RollNo"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
@@ -145,7 +137,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "3.8rem",
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
