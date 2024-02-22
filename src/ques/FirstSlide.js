@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
 import { useUser } from '../Context';
-import '../styles.css'
+// import '../styles.css'
 
 const App = () => {
   const { userData, setUserData } = useUser();
@@ -127,10 +127,8 @@ const App = () => {
         <p
           style={{
             display: "block",
-            marginLeft: "59px",
-           
-            fontSize: "18px",
-         
+            // marginLeft: "59px",
+            fontSize: "18px",       
             letterSpacing:"3px",
             color: "white",
             fontFamily: "Montserrat",
@@ -191,7 +189,7 @@ const App = () => {
           to="/Name"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "18px",
             opacity: tickmark ? '1' : '0',
           }}

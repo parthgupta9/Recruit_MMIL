@@ -32,10 +32,6 @@ const Name = () => {
     showTickmark(true)
   };
 
- 
-
-
-
   const updateWindowSize = () => {
     setWindowSize({
       width: window.innerWidth,
@@ -56,8 +52,8 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "105vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -74,36 +70,27 @@ const Name = () => {
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
           width: "23rem",
-          height: "17rem"
+          height: "16rem"
         }}
       >
         {/* Your card content goes here */}
         <p
           style={{
-            marginLeft: "27px",
-            fontSize: "44px",
-            fontFamily: "Montserrat",
-            fontWeight:"ExtraBold",
-            letterSpacing:"2px",
-            height:"80px",
-            marginTop:"16px",
+            fontSize: "40px",
+            marginTop: "10px",
+            marginBottom: "22px",
             color: "white",
+            fontFamily: "Montserrat"
           }}
         >
           Let's BEGIN!
         </p>
         <p
          style={{
-          display: "block",
-          marginLeft: "55px",
-         
-          fontSize: "18px",
-       
-          letterSpacing:"1px",
-          color: "white",
-          fontFamily: "Montserrat",
-          fontWeight:"ExtraBold",
-          marginTop: "-10px",
+          display: 'block',
+            fontSize: "18px",
+            color: "white",
+            fontFamily: "Montserrat",
           }}
         >
           What is your email id ?
@@ -141,7 +128,7 @@ const Name = () => {
           to="/Phone"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
@@ -149,7 +136,7 @@ const Name = () => {
                <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "4rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
