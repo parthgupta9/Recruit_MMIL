@@ -50,11 +50,12 @@ const Name = () => {
   return (
     <div style={{ position: "relative" }}>
       <img
-        src={bg}
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
 
