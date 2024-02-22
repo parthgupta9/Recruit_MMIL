@@ -158,20 +158,18 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "26rem",
+          width: "23rem",
           height: "28rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "70px",
-            marginRight: "40px",
             fontSize: "47px",
-            height: "90px",
+            marginTop: "10px",
+            marginBottom: "22px",
             color: "white",
-            // width:'320px',
-            fontStyle: "Montserrat",
+            fontFamily: "Montserrat"
           }}
         >
           LET'S BEGIN!
@@ -179,12 +177,9 @@ const Name = () => {
         <p
           style={{
             display: 'block',
-            marginLeft: "90px",
-            marginRight: "65px",
             fontSize: "24px",
             color: "white",
-            fontStyle: "Montserrat",
-            // marginTop: "-10px",
+            fontFamily: "Montserrat"
           }}
         >
           Choose your domain ?
@@ -201,6 +196,7 @@ const Name = () => {
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
               color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              fontFamily: "Montserrat"
               //   width: "80px",
             }}
            
@@ -221,6 +217,7 @@ const Name = () => {
               color: isHovering2 ? "#FFE454" : "#1a1a1a",
               color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              fontFamily: "Montserrat"
               //   width: "80px",
             }}
             
@@ -241,6 +238,7 @@ const Name = () => {
               color: isHovering3 ? "#FFE454" : "#1a1a1a",
               color: isActive3 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              fontFamily: "Montserrat"
               //   width: "80px",
             }}
            
@@ -261,6 +259,7 @@ const Name = () => {
               color: isHovering4 ? "#FFE454" : "#1a1a1a",
               color: isActive4 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              fontFamily: "Montserrat"
               //   width: "80px",
             }}
            
@@ -297,7 +296,7 @@ const Name = () => {
           to="/Resume"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}

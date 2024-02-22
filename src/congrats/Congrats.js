@@ -32,8 +32,8 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "110vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -57,12 +57,11 @@ const Name = () => {
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "50px",
-            marginRight: "40px",
             fontSize: "47px",
-            height: "90px",
+            marginTop: "10px",
+            marginBottom: "22px",
             color: "white",
-            fontStyle: "Montserrat",
+            fontFamily: "Montserrat"
           }}
         >
           Congratulations!
@@ -71,18 +70,16 @@ const Name = () => {
        style={{
         height: '180px',
         marginTop: '-22px',
-        marginLeft: '120px',
+        marginLeft: 'auto',
         marginBottom: '12px'
        }}
        />
        <p
        style={{
-        marginLeft: "105px",
-        marginRight: "70px",
-        fontSize: "24px",
-        color: "white",
-        fontStyle: "Montserrat",
-        marginTop: "-20px",
+        display: 'block',
+            fontSize: "24px",
+            color: "white",
+            fontFamily: "Montserrat"
       }}
        >
         You have registered successfully!

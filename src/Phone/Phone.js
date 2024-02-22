@@ -56,8 +56,8 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "105vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -73,20 +73,18 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "26rem",
-          height: "18rem"
+          width: "24rem",
+          height: "17rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            marginLeft: "70px",
-            marginRight: "40px",
             fontSize: "47px",
-            height: "90px",
+            marginTop: "10px",
+            marginBottom: "22px",
             color: "white",
-            // width:'320px',
-            fontStyle: "Montserrat",
+            fontFamily: "Montserrat"
           }}
         >
           LET'S BEGIN!
@@ -94,12 +92,9 @@ const Name = () => {
         <p
           style={{
             display: 'block',
-            marginLeft: "70px",
-            marginRight: "55px",
             fontSize: "24px",
             color: "white",
-            fontStyle: "Montserrat",
-            // marginTop: "-10px",
+            fontFamily: "Montserrat"
           }}
         >
           What is your Phone No. ?
@@ -137,7 +132,7 @@ const Name = () => {
           to="/Domain"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
