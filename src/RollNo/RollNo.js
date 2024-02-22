@@ -4,6 +4,7 @@ import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_202
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import { useUser } from '../Context';
+import "../style.css";
 
 const Name = () => {
   const { userData, setUserData } = useUser();
@@ -68,7 +69,7 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "22rem",
+          width: "23rem",
           height: "17rem"
         }}
       >
@@ -79,6 +80,7 @@ const Name = () => {
             marginTop: "10px",
             marginBottom: "22px",
             color: "white",
+            fontFamily: "Montserrat"
           }}
         >
           LET'S BEGIN!
@@ -88,6 +90,7 @@ const Name = () => {
             display: 'block',
             fontSize: "24px",
             color: "white",
+            fontFamily: "Montserrat"
           }}
         >
           What is your RollNo ?{" "}
