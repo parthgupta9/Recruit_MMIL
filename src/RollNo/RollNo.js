@@ -5,6 +5,7 @@ import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import { useUser } from '../Context';
 import "../style.css";
+import appbg from "../assets/bg-app.svg";
 
 const Name = () => {
   const { userData, setUserData } = useUser();

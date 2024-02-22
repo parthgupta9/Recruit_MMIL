@@ -5,6 +5,7 @@ import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import globalData from '../Global';
 import { useUser } from '../Context';
+import appbg from "../assets/bg-app.svg";
 
 const Name = () => {
   const { userData, setUserData } = useUser();
@@ -137,12 +138,13 @@ const Name = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <img
-        src={bg}
+         <img
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
 
@@ -280,7 +282,7 @@ const Name = () => {
           to="/Congrats"
           style={{
             display: "inline-block",
-            marginLeft: "auto",
+            marginLeft: "0%",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
@@ -288,7 +290,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem"
+            fontSize: "3.8rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
@@ -307,7 +309,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem"
+            fontSize: "3.8rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

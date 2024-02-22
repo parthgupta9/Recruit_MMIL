@@ -3,6 +3,7 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
+import appbg from "../assets/bg-app.svg";
 
 const Name = () => {
   const [windowSize, setWindowSize] = useState({
@@ -41,15 +42,15 @@ const Name = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <img
-        src={bg}
+       <img
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
-
       <div
         style={{
           position: "absolute",
@@ -63,11 +64,11 @@ const Name = () => {
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
           width: "23rem",
-          height: "19rem"
+          height: "17rem"
         }}
       >
         {/* Your card content goes here */}
-        <hp
+        <p
           style={{
             marginLeft: "27px",
             fontSize: "44px",
@@ -80,7 +81,7 @@ const Name = () => {
           }}
         >
           LET'S BEGIN!
-        </hp>
+        </p>
         <p
           style={{
             display: 'block',
@@ -131,7 +132,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem"
+            fontSize: "3.8rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

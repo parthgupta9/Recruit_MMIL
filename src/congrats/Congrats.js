@@ -50,14 +50,14 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "23.5rem",
+          width: "28rem",
           height: "25rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            fontSize: "38px",
+            fontSize: "47px",
             marginTop: "10px",
             marginBottom: "22px",
             color: "white",

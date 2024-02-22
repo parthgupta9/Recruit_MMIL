@@ -6,6 +6,8 @@ import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
 import { useUser } from '../Context';
 import '../style.css'
+import appbg from "../assets/bg-app.svg";
+
 
 const App = () => {
   const { userData, setUserData } = useUser();
@@ -83,12 +85,13 @@ const App = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <img
-        src={bg}
+       <img
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
 

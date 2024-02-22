@@ -4,6 +4,7 @@ import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_202
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import { useUser } from '../Context';
+import appbg from "../assets/bg-app.svg";
 
 const Name = () => {
   const { userData, setUserData } = useUser();
@@ -52,12 +53,13 @@ const Name = () => {
 
   return (
     <div style={{ position: "relative" }}>
-      <img
-        src={bg}
+           <img
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
 
@@ -78,7 +80,7 @@ const Name = () => {
         }}
       >
         {/* Your card content goes here */}
-        <h2
+        <p
           style={{
             
             fontSize: "44px",
@@ -90,8 +92,8 @@ const Name = () => {
             color: "white",
           }}
         >
-          LET'S BEGIN!
-        </h2>
+          Let's BEGIN!
+        </p>
         <p
          style={{
           display: "block",
