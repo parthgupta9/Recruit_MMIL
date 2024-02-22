@@ -14,6 +14,14 @@ const Name = () => {
   });
 
   const [tickmark, setTickmark] = useState(false);
+  const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const handleHoverTickmark = () => {
+   setHoverTickmark(true);
+  };
+  const handleUnHoverTickmark = () => {
+    setHoverTickmark(false);
+  };
 
   const [isActive1, setIsActive1] = useState(false);
   const [isActive2, setIsActive2] = useState(false);
@@ -145,7 +153,7 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          opacity: "0.6",
+          // opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
@@ -267,34 +275,42 @@ const Name = () => {
         {tickmark && userData.domain && (
           globalData.myGlobalVariable === '1st year' ? (
             <Link
-              to="/Congrats"
-            >
-              <img
-                src={tick}
-                alt=""
-                style={{
-                  display: "inline-block",
-                  marginLeft: "40%",
-                  marginTop: "24px",
-                  opacity: tickmark ? '1' : '0',
-                }}
-              />
-            </Link>
+          to="/Congrats"
+          style={{
+            display: "inline-block",
+            marginLeft: "40%",
+            marginTop: "24px",
+            opacity: tickmark ? '1' : '0',
+          }}
+        >
+             <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
+        </Link>
           ) : (
             <Link
-              to="/Resume"
-            >
-              <img
-                src={tick}
-                alt=""
-                style={{
-                  display: "inline-block",
-                  marginLeft: "40%",
-                  marginTop: "24px",
-                  opacity: tickmark ? '1' : '0',
-                }}
-              />
-            </Link>
+          to="/Resume"
+          style={{
+            display: "inline-block",
+            marginLeft: "40%",
+            marginTop: "24px",
+            opacity: tickmark ? '1' : '0',
+          }}
+        >
+             <i class="fa-solid fa-circle-check"
+          style={{
+            color: isHoverTickmark?"#009A0F":"#ffffff",
+            fontSize: "3.8rem"
+          }}
+          onMouseEnter={handleHoverTickmark}
+          onMouseLeave={handleUnHoverTickmark}
+          ></i>
+        </Link>
           )
         )}
 

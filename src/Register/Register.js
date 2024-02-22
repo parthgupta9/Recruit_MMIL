@@ -55,7 +55,7 @@ const App = () => {
           left: '50%',
           transform: 'translate(-50%, -50%)',
           background: 'linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)', // Adjust as needed
-          opacity:'0.6',
+          // opacity:'0.6',
           padding: '20px', 
           borderRadius: '10px', 
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', 
@@ -81,6 +81,7 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem',marginTop:'0px'
         }}>
+         <div style={{ maxHeight: "100px", overflowY: "auto" }}> 
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'60px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The students has to go to unstop.com. 
       </li>
@@ -91,6 +92,7 @@ const App = () => {
           <li> <button style={{
            width:'16rem',marginLeft:'60px',marginTop:'20px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'20px'
           }}>Click here</button></li>
+          </div>
         </ul>
       </div>
       <div className="dropdown" style={{marginTop:'20px'}}>
@@ -225,6 +227,7 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
         }}>
+          <div style={{ maxHeight: "100px", overflowY: "auto" }}>
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
       </li>
@@ -236,6 +239,7 @@ const App = () => {
           <li> <button style={{
            width:'16rem',marginLeft:'60px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
           }}>Click here</button></li>
+          </div>
         </ul>
         
       </div>
