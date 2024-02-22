@@ -145,8 +145,8 @@ const Name = () => {
         >
              <i class="fa-solid fa-circle-check"
           style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

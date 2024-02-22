@@ -127,10 +127,8 @@ const App = () => {
         <p
           style={{
             display: "block",
-            marginLeft: "18px",
-           
+            marginLeft: "18px",         
             fontSize: "18px",
-         
             letterSpacing:"3px",
             color: "white",
             fontFamily: "Montserrat",
@@ -198,8 +196,8 @@ const App = () => {
         >
           <i class="fa-solid fa-circle-check"
           style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4.8rem",
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem",
             marginTop:"20px",
           }}
           onMouseEnter={handleHoverTickmark}

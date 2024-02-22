@@ -63,6 +63,8 @@ const App = () => {
           padding: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
+          width: "20rem",
+          height: "16rem"
         }}
       >
         {isClicked && (
@@ -74,25 +76,28 @@ const App = () => {
 
         <h2
           style={{
-            marginLeft: "70px",
-            marginRight: "70px",
-            fontSize: "3rem",
-            height: "96px",
-            color: "#ffffff",
-            fontStyle: "Montserrat",
+            marginLeft: "35px",
+            fontSize: "40px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"20px",
+            color: "white",
           }}
         >
           MMIL
         </h2>
         <p
           style={{
-            marginLeft: "45px",
-            marginRight: "35px",
-            fontSize: "2rem",
-            height: "96px",
+            display: "block",
+            marginLeft: "18px",         
+            fontSize: "18px",        
+            letterSpacing:"3px",
             color: "white",
-            fontStyle: "Montserrat",
-            marginTop: "-20px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            marginTop: "-10px",
           }}
         >
           LET'S START
@@ -100,11 +105,11 @@ const App = () => {
         <button
           style={{
             fontWeight: "bold",
-            backgroundColor: isHovering ? "#000000" : "#FFE454",
+            backgroundColor: isHovering ? "#009A0F" : "#FFE454",
             height: "44px",
             width: "124px",
-            marginLeft: "70px",
-            marginTop: "-10px",
+            marginLeft: "auto",
+            // marginTop: "-10px",
           }}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
@@ -114,8 +119,8 @@ const App = () => {
             to="#"
             style={{
               textDecoration: "none",
-              color: "#000000",
-              color: isHovering ? "#FFE454" : "#000000",
+              color: "#009A0F",
+              color: isHovering ? "#FFE454" : "#009A0F",
             }}
           >
             START
