@@ -189,7 +189,7 @@ const App = () => {
                 </div>
               </ul>
             </div>
-            <div className="dropup" style={{ marginTop: "20px" }}>
+            <div className="dropdown" style={{ marginTop: "20px" }}>
               <button
                 className="btn "
                 type="button"
@@ -262,7 +262,7 @@ const App = () => {
       <button
         style={{
           position: 'absolute',
-          bottom: '50px',
+          bottom: '5px',
           left: '50%',
           transform: 'translateX(-50%)',
           padding: '10px',
@@ -274,7 +274,7 @@ const App = () => {
           cursor: 'pointer',
           width:'24rem'
         }}
-      ><Link to="/First" style={{textDecoration: 'none', color:'#009A0F', color: isHovering ? '#FFE454' : '#009A0F',}}  onMouseEnter={handleMouseEnter}
+      ><Link to="/First" style={{textDecoration: 'none', color: isHovering ? '#FFE454' : '#000000',}}  onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}> Register</Link>
        
       </button>

@@ -100,7 +100,7 @@ const App = () => {
         <button
           style={{
             fontWeight: "bold",
-            backgroundColor: isHovering ? "#009A0F" : "#FFE454",
+            backgroundColor: isHovering ? "#000000" : "#FFE454",
             height: "44px",
             width: "124px",
             marginLeft: "70px",
@@ -114,8 +114,8 @@ const App = () => {
             to="#"
             style={{
               textDecoration: "none",
-              color: "#009A0F",
-              color: isHovering ? "#FFE454" : "#009A0F",
+              color: "#000000",
+              color: isHovering ? "#FFE454" : "#000000",
             }}
           >
             START

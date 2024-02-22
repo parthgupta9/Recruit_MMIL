@@ -83,7 +83,7 @@ const App = () => {
             width:'124px',
             marginLeft:'70px',
             marginTop:'-10px'
-        }}><Link to="/Register" style={{textDecoration: 'none', color:'#009A0F', color: isHovering ? '#FFE454' : '#009A0F',}}  onMouseEnter={handleMouseEnter}
+        }}><Link to="/Register" style={{textDecoration: 'none', color:'#000000', color: isHovering ? '#FFE454' : '#000000',}}  onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}>START</Link></button>
            <img
           src={mmil}
