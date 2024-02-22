@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
 import { useUser } from '../Context';
-import '../phone.css';
+import '../styles.css'
 
 const App = () => {
   const { userData, setUserData } = useUser();
+
+  
 
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
@@ -85,8 +87,8 @@ const App = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "105vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -103,49 +105,55 @@ const App = () => {
           paddingTop: "20px",
           borderRadius: "10px", // Adjust as needed
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)", // Adjust as needed
-          width: "22rem",
-          height: "18rem"
+          width: "23rem",
+          height: "17rem"
         }}
       >
         {/* Your card content goes here */}
-        <h2
+        <p
           style={{
-            textAlign: "center",
-            fontSize: "3rem",
-            marginBottom: "8%",
+            marginLeft: "35px",
+            fontSize: "40px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"20px",
             color: "white",
-            fontStyle: "Montserrat",
-            fontWeight: "bold",
-            letterSpacing: "1.5px"
           }}
         >
-          LET'S BEGIN
-        </h2>
+          Let's BEGIN!
+        </p>
         <p
           style={{
             display: "block",
-            // textAlign: "center",
-            fontSize: "2rem",
-            // height: "76px",
+            marginLeft: "59px",
+           
+            fontSize: "18px",
+         
+            letterSpacing:"3px",
             color: "white",
-            fontStyle: "Montserrat",
-            // marginTop: "-10px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            marginTop: "-10px",
           }}
         >
           Choose your year?
         </p>
 
-        <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <div style={{ display: "flex"}}>
           <a
             href="#"
             className="btn"
             style={{
               border: "2px solid #FFE454",
+              borderRadius:"17px",
               backgroundColor: isHovering1 ? "#1a1a1a" : "#FFE454",
               backgroundColor: isActive1 ? "#1a1a1a" : "#FFE454",
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
               color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              marginLeft:"50px",
               width: "80px",
             }}
             
@@ -161,11 +169,13 @@ const App = () => {
             className="btn"
             style={{
               border: "2px solid #FFE454",
+              borderRadius:"17px",
               backgroundColor: isHovering2 ? "#1a1a1a" : "#FFE454",
               backgroundColor: isActive2 ? "#1a1a1a" : "#FFE454",
               color: isHovering2 ? "#FFE454" : "#1a1a1a",
               color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
+              marginLeft:"80px",
               width: "80px",
             }}
            
@@ -189,7 +199,8 @@ const App = () => {
           <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "4.8rem",
+            marginTop:"20px",
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
@@ -200,11 +211,11 @@ const App = () => {
           alt="Overlay Image"
           style={{
             position: "absolute",
-            marginTop: "-20%",
+            marginTop: "-16%",
             top: "-15%",
             left: "30%",
-            width: "48%",
-            height: "28%",
+            width: "50%",
+            height: "34%",
             objectFit: "cover", // Adjust as needed
             borderRadius: "10px", // Adjust as needed
             opacity: 1, // Adjust as needed

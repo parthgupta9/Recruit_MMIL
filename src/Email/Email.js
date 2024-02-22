@@ -17,9 +17,6 @@ const Name = () => {
     height: window.innerHeight,
   });
 
-  const [user, setUser] = useState({
-    name: " ",
-  });
 
   const [tickmark, showTickmark] = useState(false);
   const [isHoverTickmark, setHoverTickmark] = useState(false);
@@ -35,36 +32,9 @@ const Name = () => {
     showTickmark(true)
   };
 
-  const Postdata = async (e) => {
-    e.preventDefault();
-    const { name } = user;
+ 
 
-    const res = await fetch("/name", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-      }),
-    });
 
-    const data = await res.json();
-    if (data.status === 422 || !data) {
-      window.alert("Invalid Registration");
-    } else {
-      window.alert("Registration Successfull");
-    }
-  };
-
-  let name, value;
-  const handleInputs = (e) => {
-    console.log(e);
-    name = e.target.name;
-    value = e.target.value;
-
-    setUser({ ...user, [name]: value });
-  };
 
   const updateWindowSize = () => {
     setWindowSize({
@@ -103,33 +73,37 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "26rem",
-          height: "18rem"
+          width: "23rem",
+          height: "17rem"
         }}
       >
         {/* Your card content goes here */}
-        <h2
-          style={{
-            marginLeft: "70px",
-            marginRight: "40px",
-            fontSize: "47px",
-            height: "90px",
-            color: "white",
-            // width:'320px',
-            fontStyle: "Montserrat",
-          }}
-        >
-          LET'S BEGIN!
-        </h2>
         <p
           style={{
-            display: 'block',
-            marginLeft: "80px",
-            marginRight: "60px",
-            fontSize: "24px",
+            marginLeft: "27px",
+            fontSize: "44px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
             color: "white",
-            fontStyle: "Montserrat",
-            // marginTop: "-10px",
+          }}
+        >
+          Let's BEGIN!
+        </p>
+        <p
+         style={{
+          display: "block",
+          marginLeft: "55px",
+         
+          fontSize: "18px",
+       
+          letterSpacing:"1px",
+          color: "white",
+          fontFamily: "Montserrat",
+          fontWeight:"ExtraBold",
+          marginTop: "-10px",
           }}
         >
           What is your email id ?
@@ -139,14 +113,14 @@ const Name = () => {
             border: "1px solid #FFE454",
             borderRadius: "12px",
             padding: "6px",
-            width: "75%",
+            width: "70%",
             marginLeft: "55px",
             marginTop: "8px",
           }}
         >
           <input
             className="form"
-            formMethod="POST"
+            
             style={{
               width: "100%",
               border: "none",
