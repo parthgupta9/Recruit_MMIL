@@ -155,6 +155,8 @@ const Name = () => {
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
+              onTouchStart={handleHoverTickmark} // Trigger hover effect on touch
+          onTouchEnd={handleUnHoverTickmark}
           ></i>
         </Link>
 
