@@ -4,60 +4,57 @@ import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_202
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import globalData from '../Global';
+import { useUser } from '../Context';
 
 const Name = () => {
+  const { userData, setUserData } = useUser();
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
   });
 
-  const [user, setUser] = useState({
-    name: " ",
-  });
-
-  const [tickmark, showTickmark] = useState(false);
-  const [isHoverTickmark, setHoverTickmark] = useState(false);
-
-  const handleHoverTickmark = () => {
-   setHoverTickmark(true);
-  };
-  const handleUnHoverTickmark = () => {
-    setHoverTickmark(false);
-  };
-
-  const handleShowTickmark = (e) => {
-    showTickmark(true)
-  };
+  const [tickmark, setTickmark] = useState(false);
 
   const [isActive1, setIsActive1] = useState(false);
   const [isActive2, setIsActive2] = useState(false);
   const [isActive3, setIsActive3] = useState(false);
   const [isActive4, setIsActive4] = useState(false);
 
-  function handleActive1() {
+  const handleActive1 = () => {
     setIsActive1(true);
     setIsActive2(false);
     setIsActive3(false);
     setIsActive4(false);
-  }
-  function handleActive2() {
+    setUserData({ ...userData, domain: "Design" });
+    setTickmark(true);
+  };
+  
+  const handleActive2 = () => {
     setIsActive2(true);
     setIsActive1(false);
     setIsActive3(false);
     setIsActive4(false);
-  }
-  function handleActive3() {
+    setUserData({ ...userData, domain: "programming" });
+    setTickmark(true);
+  };
+  
+  const handleActive3 = () => {
     setIsActive3(true);
     setIsActive1(false);
     setIsActive2(false);
     setIsActive4(false);
-  }
-  function handleActive4() {
+    setUserData({ ...userData, domain: "web-dev" });
+    setTickmark(true);
+  };
+  
+  const handleActive4 = () => {
     setIsActive4(true);
     setIsActive1(false);
     setIsActive2(false);
     setIsActive3(false);
-  }
+    setUserData({ ...userData, domain: "android" });
+    setTickmark(true);
+  };
 
   const [isHovering1, setIsHovering1] = useState(false);
   const [isHovering2, setIsHovering2] = useState(false);
@@ -71,6 +68,7 @@ const Name = () => {
   const handleMouseLeave1 = () => {
     setIsHovering1(false);
   };
+
   const handleMouseEnter2 = () => {
     setIsHovering2(true);
   };
@@ -78,6 +76,7 @@ const Name = () => {
   const handleMouseLeave2 = () => {
     setIsHovering2(false);
   };
+
   const handleMouseEnter3 = () => {
     setIsHovering3(true);
   };
@@ -85,43 +84,13 @@ const Name = () => {
   const handleMouseLeave3 = () => {
     setIsHovering3(false);
   };
+
   const handleMouseEnter4 = () => {
     setIsHovering4(true);
   };
 
   const handleMouseLeave4 = () => {
     setIsHovering4(false);
-  };
-
-  const Postdata = async (e) => {
-    e.preventDefault();
-    const { name } = user;
-
-    const res = await fetch("/name", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-      }),
-    });
-
-    const data = await res.json();
-    if (data.status === 422 || !data) {
-      window.alert("Invalid Registration");
-    } else {
-      window.alert("Registration Successfull");
-    }
-  };
-
-  let name, value;
-  const handleInputs = (e) => {
-    console.log(e);
-    name = e.target.name;
-    value = e.target.value;
-
-    setUser({ ...user, [name]: value });
   };
 
   const updateWindowSize = () => {
@@ -137,6 +106,26 @@ const Name = () => {
       window.removeEventListener("resize", updateWindowSize);
     };
   }, []);
+
+  useEffect(() => {
+    if (tickmark && userData.domain) {
+      // All necessary data is available and tickmark is pressed, so save the data
+      fetch('http://localhost:5000/name', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Data saved:', data);
+        })
+        .catch((error) => {
+          console.error('Error saving data:', error);
+        });
+    }
+  }, [tickmark, userData]);
 
   return (
     <div style={{ position: "relative" }}>
@@ -156,7 +145,7 @@ const Name = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           background: "linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d)", // Adjust as needed
-          // opacity: "0.6",
+          opacity: "0.6",
           padding: "10px",
           paddingTop: "20px",
           borderRadius: "10px",
@@ -206,7 +195,7 @@ const Name = () => {
               fontWeight: "bold",
               //   width: "80px",
             }}
-            onFocus={handleShowTickmark}
+           
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
             onClick={handleActive1}
@@ -226,7 +215,7 @@ const Name = () => {
               fontWeight: "bold",
               //   width: "80px",
             }}
-            onFocus={handleShowTickmark}
+            
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}
             onClick={handleActive2}
@@ -246,7 +235,7 @@ const Name = () => {
               fontWeight: "bold",
               //   width: "80px",
             }}
-            onFocus={handleShowTickmark}
+           
             onMouseEnter={handleMouseEnter3}
             onMouseLeave={handleMouseLeave3}
             onClick={handleActive3}
@@ -266,7 +255,7 @@ const Name = () => {
               fontWeight: "bold",
               //   width: "80px",
             }}
-            onFocus={handleShowTickmark}
+           
             onMouseEnter={handleMouseEnter4}
             onMouseLeave={handleMouseLeave4}
             onClick={handleActive4}
@@ -275,52 +264,39 @@ const Name = () => {
           </a>
         </div>
 
-        {globalData.myGlobalVariable === '1st year' ? (
-         <Link
-         to="/Congrats"
-         style={{
-           display: "inline-block",
-           marginLeft: "40%",
-           marginTop: "24px",
-           opacity: tickmark ? '1' : '0',
-         }}
-       >
-            <i class="fa-solid fa-circle-check"
-         style={{
-           color: isHoverTickmark?"#009A0F":"#ffffff",
-           fontSize: "3.8rem"
-         }}
-         onMouseEnter={handleHoverTickmark}
-         onMouseLeave={handleUnHoverTickmark}
-         ></i>
-       </Link>
-        ) :(
-          <Link
-          to="/Resume"
-          style={{
-            display: "inline-block",
-            marginLeft: "40%",
-            marginTop: "24px",
-            opacity: tickmark ? '1' : '0',
-          }}
-        >
-             <i class="fa-solid fa-circle-check"
-          style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
-          }}
-          onMouseEnter={handleHoverTickmark}
-          onMouseLeave={handleUnHoverTickmark}
-          ></i>
-        </Link>
+        {tickmark && userData.domain && (
+          globalData.myGlobalVariable === '1st year' ? (
+            <Link
+              to="/Congrats"
+            >
+              <img
+                src={tick}
+                alt=""
+                style={{
+                  display: "inline-block",
+                  marginLeft: "40%",
+                  marginTop: "24px",
+                  opacity: tickmark ? '1' : '0',
+                }}
+              />
+            </Link>
+          ) : (
+            <Link
+              to="/Resume"
+            >
+              <img
+                src={tick}
+                alt=""
+                style={{
+                  display: "inline-block",
+                  marginLeft: "40%",
+                  marginTop: "24px",
+                  opacity: tickmark ? '1' : '0',
+                }}
+              />
+            </Link>
+          )
         )}
-
-        {/* <img
-          src={tick}
-          alt=""
-        // onClick={Postdata}
-        ></img> */}
-        {/* </Link> */}
 
         <img
           src={mmil}
@@ -336,7 +312,7 @@ const Name = () => {
           }}
         />
       </div>
-    </div >
+    </div>
   );
 };
 

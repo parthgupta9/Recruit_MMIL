@@ -2,6 +2,7 @@ const dotenv = require("dotenv")
 
 const mongoose = require('mongoose');
 const express = require('express')
+const cors = require('cors');
 const app = express();
 
 dotenv.config({path:'./config.env'});
@@ -9,6 +10,8 @@ dotenv.config({path:'./config.env'});
 
 require('./db/connect')
 // const MMIL = require('./models/FormData');
+
+app.use(cors());
 
 app.use(express.json())
 
@@ -38,5 +41,5 @@ app.get('/about',(req,res)=>{
 
 
 app.listen(PORT,()=>{
-    console.log(`server is running at port no 3000`)
+    console.log(`server is running at port no 5000`)
 })

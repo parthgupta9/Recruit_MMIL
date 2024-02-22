@@ -15,6 +15,18 @@ const FormData = new mongoose.Schema({
     email:{
         type:String,
         required:true
+    },
+    domain:{
+        type:String,
+        required:true
+    },
+    phoneNo:{
+        type:Number,
+        required:true
+    },
+    branch:{
+        type:String,
+        required:true
     }
 })
 

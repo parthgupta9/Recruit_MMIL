@@ -13,19 +13,17 @@ routes.get('/',  (req,res) =>{
 
 routes.post('/name', async (req, res) => {
     try {
-        const { name, year, email, rollNo } = req.body;
-
+        const { name, year, email, rollNo, domain,phoneNo,branch } = req.body;
         if (!name || !email || !year || !rollNo) {
             return res.status(422).json({ error: "Please fill all the provided fields" });
         }
-
         const userExist = await MMIL.findOne({ email: email });
 
         if (userExist) {
             return res.status(422).json({ error: "Email already exists" });
         }
 
-        const user = new MMIL({ name, email, year, rollNo });
+        const user = new MMIL({ name, email, year, rollNo , domain,phoneNo,branch});
         await user.save();
         console.log(name);
 

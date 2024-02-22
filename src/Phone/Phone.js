@@ -3,8 +3,15 @@ import bg from "../assets/bg.jpg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
+import { useUser } from '../Context';
 
 const Name = () => {
+  const { userData, setUserData } = useUser();
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, phoneNo: e.target.value });
+  };
+
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -28,36 +35,6 @@ const Name = () => {
     showTickmark(true)
   };
 
-  const Postdata = async (e) => {
-    e.preventDefault();
-    const { name } = user;
-
-    const res = await fetch("/name", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-      }),
-    });
-
-    const data = await res.json();
-    if (data.status === 422 || !data) {
-      window.alert("Invalid Registration");
-    } else {
-      window.alert("Registration Successfull");
-    }
-  };
-
-  let name, value;
-  const handleInputs = (e) => {
-    console.log(e);
-    name = e.target.name;
-    value = e.target.value;
-
-    setUser({ ...user, [name]: value });
-  };
 
   const updateWindowSize = () => {
     setWindowSize({
@@ -149,8 +126,8 @@ const Name = () => {
               color: "white",
             }}
             type="email"
-            // value={user.name}
-            onChange={handleInputs}
+            value={userData.phoneNo}
+            onChange={handleChange}
             onFocus={handleShowTickmark}
             placeholder="Text here"
             aria-label="type here"

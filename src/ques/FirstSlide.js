@@ -4,8 +4,13 @@ import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_202
 import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
+import { useUser } from '../Context';
 
 const App = () => {
+  const { userData, setUserData } = useUser();
+
+  
+
   const [windowSize, setWindowSize] = useState({
     width: window.innerWidth,
     height: window.innerHeight,
@@ -31,6 +36,7 @@ const App = () => {
     setIsActive1(true);
     setIsActive2(false);
     globalData.myGlobalVariable = '1st year';
+    setUserData({ ...userData, year:"1st" });
   }
 
   const [isActive2, setIsActive2] = useState(false);
@@ -39,6 +45,7 @@ const App = () => {
     setIsActive2(true);
     setIsActive1(false);
     globalData.myGlobalVariable = '2nd year';
+    setUserData({ ...userData, year:"2nd" });
   }
 
   const [isHovering1, setIsHovering1] = useState(false);
@@ -142,6 +149,7 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
+            
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter1}
             onMouseLeave={handleMouseLeave1}
@@ -161,6 +169,7 @@ const App = () => {
               fontWeight: "bold",
               width: "80px",
             }}
+           
             onFocus={handleShowTickmark}
             onMouseEnter={handleMouseEnter2}
             onMouseLeave={handleMouseLeave2}

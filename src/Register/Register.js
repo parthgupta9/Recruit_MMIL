@@ -104,30 +104,124 @@ const App = () => {
           <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
         </button>
 
-        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem',marginTop:'0px'
-        }}>
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'60px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>Pay attention to details and follow the instructions provided.
-      </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}> Use this opportunity to showcase your skills and approach to problem-solving. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The students has to complete the task in before the deadline. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The link to.png </li>
-          {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
-          <li> <button style={{
-           width:'16rem',marginLeft:'60px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
-          }}>Click here</button></li>
-        </ul>
-      </div>
-      <div className="dropup" style={{marginTop:'20px'}}>
-        <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'100px',
-       backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem'}}>
-          <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 3</p>
-          
-          <p style={{marginTop:'-23px',fontSize:'22px', fontWeight: 'bolder'}}> HR Round</p>
-      
-          <p style={{marginTop:'-15px',fontSize:'10px'}}>Personal interview and HR interview round to check your <br /> personality and coordination skills.</p>
-          <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
-        </button>
+              <ul
+                className="dropdown-menu"
+                style={{
+                  backgroundColor: "rgba(255, 250, 231, 1)",
+                  width: "24rem",
+                  marginTop: "0px",
+                }}
+              >
+                <div style={{ maxHeight: "100px", overflowY: "auto" }}>
+                <li
+                  style={{
+                    fontSize: "12px",
+                    fontStyle: "Montserrat",
+                    listStyle: "disc",
+                    marginLeft: "60px",
+                    fontWeight: "bold",
+                    marginBottom: "4px",
+                    marginTop: "4px",
+                  }}
+                >
+                  {" "}
+                  Instructions for Students
+                </li>
+                <li
+                  style={{
+                    fontSize: "10px",
+                    fontStyle: "Montserrat",
+                    listStyle: "disc",
+                    marginLeft: "80px",
+                  }}
+                >
+                  Pay attention to details and follow the instructions provided.
+                </li>
+                <li
+                  style={{
+                    fontSize: "10px",
+                    fontStyle: "Montserrat",
+                    listStyle: "disc",
+                    marginLeft: "80px",
+                  }}
+                >
+                  {" "}
+                  Use this opportunity to showcase your skills and approach to
+                  problem-solving.{" "}
+                </li>
+                <li
+                  style={{
+                    fontSize: "10px",
+                    fontStyle: "Montserrat",
+                    listStyle: "disc",
+                    marginLeft: "80px",
+                  }}
+                >
+                  The students has to complete the task in before the deadline.{" "}
+                </li>
+                <li
+                  style={{
+                    fontSize: "10px",
+                    fontStyle: "Montserrat",
+                    listStyle: "disc",
+                    marginLeft: "80px",
+                  }}
+                >
+                  The link to.png{" "}
+                </li>
+                {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
+                <li>
+                  {" "}
+                  <button
+                    style={{
+                      width: "16rem",
+                      marginLeft: "60px",
+                      marginTop: "30px",
+                      border: "1px solidrgba(255, 230, 223, 1)",
+                      marginBottom: "30px",
+                    }}
+                  >
+                    Click here
+                  </button>
+                </li>
+                </div>
+              </ul>
+            </div>
+            <div className="dropup" style={{ marginTop: "20px" }}>
+              <button
+                className="btn "
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style={{
+                  height: "100px",
+                  backgroundColor: "rgba(182, 232, 255, 1)",
+                  width: "24rem",
+                }}
+              >
+                <p stye={{ fontSize: "14px", fontWeight: "bold" }}>Round 3</p>
+
+                <p
+                  style={{
+                    marginTop: "-23px",
+                    fontSize: "22px",
+                    fontWeight: "bolder",
+                  }}
+                >
+                  {" "}
+                  HR Round
+                </p>
+
+                <p style={{ marginTop: "-15px", fontSize: "10px" }}>
+                  Personal interview and HR interview round to check your <br />{" "}
+                  personality and coordination skills.
+                </p>
+                <img
+                  src={vector}
+                  alt=""
+                  style={{ marginTop: "-32%", marginLeft: "20rem" }}
+                ></img>
+              </button>
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
         }}>
