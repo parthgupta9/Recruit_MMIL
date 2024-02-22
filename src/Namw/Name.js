@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import bg from "../assets/bg.jpg";
+import appbg from "../assets/bg-app.svg";
 import mmil from "../assets/1000058712_f1beee89cb94ffdbc7b3a05cbdf6e5cc-30_9_2023, 1_42_36 pm 2.png";
 import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import { useUser } from '../Context';
+import '../phone.css';
 
 const Name = () => {
   const { userData, setUserData } = useUser();
@@ -51,7 +53,7 @@ const Name = () => {
   return (
     <div style={{ position: "relative" }}>
       <img
-        src={bg}
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
           width: "105vw",
