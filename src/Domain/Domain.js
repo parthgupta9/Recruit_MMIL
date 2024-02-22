@@ -141,8 +141,8 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "105vw",
-          height: "105vh",
+          width: "100vw",
+          height: "100vh",
         }}
       />
 
@@ -277,7 +277,7 @@ const Name = () => {
           to="/Congrats"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
@@ -285,7 +285,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "4rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
@@ -304,7 +304,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "4rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

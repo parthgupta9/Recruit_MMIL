@@ -74,7 +74,7 @@ const Name = () => {
         }}
       >
         {/* Your card content goes here */}
-        <p
+        <h2
           style={{
             fontSize: "40px",
             marginTop: "10px",
@@ -83,8 +83,8 @@ const Name = () => {
             fontFamily: "Montserrat"
           }}
         >
-          Let's BEGIN!
-        </p>
+          LET'S BEGIN!
+        </h2>
         <p
          style={{
           display: 'block',

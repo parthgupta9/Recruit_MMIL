@@ -63,7 +63,7 @@ const Name = () => {
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
           width: "23rem",
-          height: "17rem"
+          height: "19rem"
         }}
       >
         {/* Your card content goes here */}
@@ -128,7 +128,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            fontSize: "4rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

@@ -32,8 +32,8 @@ const Name = () => {
         src={bg}
         alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: "103vw",
+          height: "103vh",
         }}
       />
 
@@ -50,14 +50,14 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "28rem",
+          width: "23rem",
           height: "25rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            fontSize: "47px",
+            fontSize: "40px",
             marginTop: "10px",
             marginBottom: "22px",
             color: "white",

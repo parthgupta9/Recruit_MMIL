@@ -73,7 +73,7 @@ const Name = () => {
           paddingTop: "20px",
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
-          width: "24rem",
+          width: "23rem",
           height: "16rem"
         }}
       >
