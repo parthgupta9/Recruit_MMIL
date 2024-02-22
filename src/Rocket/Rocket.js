@@ -8,6 +8,11 @@ import "../Rocket/Rocket.css";
 import appbg from "../assets/bg-app.svg";
 
 const App = () => {
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   const [isHovering, setIsHovering] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -44,11 +49,12 @@ const App = () => {
   return (
     <div style={{ position: "relative" }}>
       <img
-        src={bg}
-        alt="Background"
+         src={windowSize.width <= 900 ? appbg : bg}
+        alt="Your Image"
         style={{
-          width: "100vw",
-          height: "100vh",
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
 
@@ -77,7 +83,7 @@ const App = () => {
 
         <h2
           style={{
-            marginLeft: "35px",
+            marginLeft: "26px",
             fontSize: "40px",
             fontFamily: "Montserrat",
             fontWeight:"ExtraBold",
@@ -109,7 +115,9 @@ const App = () => {
             backgroundColor: isHovering ? "#009A0F" : "#FFE454",
             height: "44px",
             width: "124px",
-            marginLeft: "auto",
+            marginLeft: "7%",
+            border: "none",
+            borderRadius: "10px",
             // marginTop: "-10px",
           }}
           onMouseEnter={handleMouseEnter}
