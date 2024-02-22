@@ -158,18 +158,16 @@ const Name = () => {
         </Link>
 
         <img
-          src={mmil}
-          alt="Overlay Image"
-          style={{
-            position: "absolute",
-            marginTop: "-20%",
-            top: "-20%",
-            left: "30%",
-            width: "50%",
-            height: "30%",
-            // Adjust as needed
-            // Adjust as needed
-            opacity: 0.9, // Adjust as needed
+           src={mmil}
+           alt="Overlay Image"
+           style={{
+             position: "absolute",
+             marginTop: "-20%",
+             top: "-20%",
+             left: "30%",
+             width: "46%",
+             height: "35%",
+             opacity: 1, 
           }}
         />
       </div>

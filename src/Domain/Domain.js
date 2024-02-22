@@ -289,8 +289,8 @@ const Name = () => {
         >
              <i class="fa-solid fa-circle-check"
           style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
@@ -308,8 +308,8 @@ const Name = () => {
         >
              <i class="fa-solid fa-circle-check"
           style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
@@ -325,7 +325,8 @@ const Name = () => {
           alt="Overlay Image"
           style={{
             position: "absolute",
-            marginTop: "-20%",
+            marginTop: "-24%",
+            // marginBottom: "15%",
             top: "-2%",
             left: "30%",
             width: "40%",
