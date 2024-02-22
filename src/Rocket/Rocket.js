@@ -5,6 +5,7 @@ import rocketImg from "../images/Vector-rocket.png";
 import smokeImg from "../images/Frame 6.png";
 import { Link, useNavigate } from "react-router-dom";
 import "../Rocket/Rocket.css";
+import appbg from "../assets/bg-app.svg";
 
 const App = () => {
   const [isHovering, setIsHovering] = useState(false);

@@ -4,6 +4,7 @@ import vector from '../assets/Vector (1).png'
 import unstop from '../assets/unstop-logo 1.png'
 import mmil from '../assets/mmil.png'
 import { Link } from 'react-router-dom';
+import appbg from "../assets/bg-app.svg";
 
 const App = () => {
   const [windowSize, setWindowSize] = useState({
@@ -39,12 +40,13 @@ const App = () => {
  <>
  <div>
     <div style={{ position: 'relative' }}>
-      <img
-        src={bg}
+    <img
+         src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
-          width: '105vw',
-          height: '105vh',
+          width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
+          height: windowSize.Width < 900 ? "100vh" : "100vh", // Adjust as needed
+          objectFit: "cover", // Adjust as needed
         }}
       />
  

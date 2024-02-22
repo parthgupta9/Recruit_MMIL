@@ -2,6 +2,7 @@ import React from 'react'
 import '../Details/Details.css'
 import bg from '../assets/bg.jpg'
 
+
 const Details = () => {
   return (
     <div className='detail'>
