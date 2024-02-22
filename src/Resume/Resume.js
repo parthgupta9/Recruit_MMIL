@@ -67,17 +67,20 @@ const Name = () => {
         }}
       >
         {/* Your card content goes here */}
-        <h2
+        <hp
           style={{
-            fontSize: "47px",
-            marginTop: "10px",
-            marginBottom: "22px",
+            marginLeft: "27px",
+            fontSize: "44px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
             color: "white",
-            fontFamily: "Montserrat"
           }}
         >
           LET'S BEGIN!
-        </h2>
+        </hp>
         <p
           style={{
             display: 'block',

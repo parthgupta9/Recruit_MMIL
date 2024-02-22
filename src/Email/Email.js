@@ -32,6 +32,10 @@ const Name = () => {
     showTickmark(true)
   };
 
+ 
+
+
+
   const updateWindowSize = () => {
     setWindowSize({
       width: window.innerWidth,
@@ -70,27 +74,36 @@ const Name = () => {
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
           width: "23rem",
-          height: "16rem"
+          height: "17rem"
         }}
       >
         {/* Your card content goes here */}
         <h2
           style={{
-            fontSize: "40px",
-            marginTop: "10px",
-            marginBottom: "22px",
+            
+            fontSize: "44px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
             color: "white",
-            fontFamily: "Montserrat"
           }}
         >
           LET'S BEGIN!
         </h2>
         <p
          style={{
-          display: 'block',
-            fontSize: "18px",
-            color: "white",
-            fontFamily: "Montserrat",
+          display: "block",
+          marginLeft: "20px",
+         
+          fontSize: "18px",
+       
+          letterSpacing:"1px",
+          color: "white",
+          fontFamily: "Montserrat",
+          fontWeight:"ExtraBold",
+          marginTop: "-10px",
           }}
         >
           What is your email id ?
@@ -128,7 +141,7 @@ const Name = () => {
           to="/Phone"
           style={{
             display: "inline-block",
-            marginLeft: "auto",
+            marginLeft: "0%",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
@@ -136,7 +149,7 @@ const Name = () => {
                <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem"
+            fontSize: "4.1rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

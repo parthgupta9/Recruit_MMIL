@@ -78,26 +78,35 @@ const Name = () => {
         }}
       >
         {/* Your card content goes here */}
-        <h2
-          style={{
-            fontSize: "40px",
-            marginTop: "10px",
-            marginBottom: "22px",
-            color: "white",
-            fontFamily: "Montserrat"
-          }}
-        >
-          LET'S BEGIN!
-        </h2>
         <p
           style={{
-            display: 'block',
-            fontSize: "18px",
+            
+            fontSize: "44px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
             color: "white",
-            fontFamily: "Montserrat"
           }}
         >
-          What is your Phone No. ?
+          Let's BEGIN!
+        </p>
+        <p
+         style={{
+          display: "block",
+          marginLeft: "8px",
+         
+          fontSize: "18px",
+       
+          letterSpacing:"1px",
+          color: "white",
+          fontFamily: "Montserrat",
+          fontWeight:"ExtraBold",
+          marginTop: "-10px",
+          }}
+        >
+        What is your Phone No. ?
         </p>
         <div
           style={{
@@ -105,7 +114,7 @@ const Name = () => {
             borderRadius: "12px",
             padding: "6px",
             width: "75%",
-            marginLeft: "55px",
+            marginLeft: "50px",
             marginTop: "8px",
           }}
         >
@@ -140,7 +149,7 @@ const Name = () => {
           <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem"
+            fontSize: "3.8rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
