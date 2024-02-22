@@ -329,7 +329,7 @@ const Name = () => {
             // marginBottom: "15%",
             top: "-2%",
             left: "30%",
-            width: "40%",
+            width: "42%",
             height: "20%",
             opacity: 1,
           }}

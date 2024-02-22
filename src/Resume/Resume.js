@@ -70,7 +70,7 @@ const Name = () => {
         {/* Your card content goes here */}
         <p
           style={{
-            marginLeft: "27px",
+              
             fontSize: "44px",
             fontFamily: "Montserrat",
             fontWeight:"ExtraBold",
@@ -84,10 +84,14 @@ const Name = () => {
         </p>
         <p
           style={{
-            display: 'block',
-            fontSize: "24px",
+            display: "block",
+            marginLeft: "8px",
+            fontSize: "18px",      
+            letterSpacing:"1px",
             color: "white",
-            fontFamily: "Montserrat"
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            marginTop: "-10px",
           }}
         >
           Upload Resume Drive Link!{" "}
@@ -131,8 +135,8 @@ const Name = () => {
         >
              <i class="fa-solid fa-circle-check"
           style={{
-            color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "3.8rem"
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem"
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

@@ -98,9 +98,7 @@ const Name = () => {
          style={{
           display: "block",
           marginLeft: "8px",
-         
-          fontSize: "18px",
-       
+          fontSize: "18px",      
           letterSpacing:"1px",
           color: "white",
           fontFamily: "Montserrat",
