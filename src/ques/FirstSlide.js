@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import tick from "../assets/Frame 13.png";
 import globalData from '../Global';
 import { useUser } from '../Context';
-// import '../styles.css'
+import '../style.css'
 
 const App = () => {
   const { userData, setUserData } = useUser();
@@ -127,8 +127,10 @@ const App = () => {
         <p
           style={{
             display: "block",
-            // marginLeft: "59px",
-            fontSize: "18px",       
+            marginLeft: "18px",
+           
+            fontSize: "18px",
+         
             letterSpacing:"3px",
             color: "white",
             fontFamily: "Montserrat",
@@ -151,8 +153,8 @@ const App = () => {
               color: isHovering1 ? "#FFE454" : "#1a1a1a",
               color: isActive1 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
-              marginLeft:"50px",
-              width: "80px",
+              marginLeft:"68px",
+              width: "70px",
             }}
             
             onFocus={handleShowTickmark}
@@ -174,7 +176,7 @@ const App = () => {
               color: isActive2 ? "#FFE454" : "#1a1a1a",
               fontWeight: "bold",
               marginLeft:"80px",
-              width: "80px",
+              width: "70px",
             }}
            
             onFocus={handleShowTickmark}
@@ -189,7 +191,7 @@ const App = () => {
           to="/Name"
           style={{
             display: "inline-block",
-            marginLeft: "auto",
+            marginLeft: "0%",
             marginTop: "18px",
             opacity: tickmark ? '1' : '0',
           }}

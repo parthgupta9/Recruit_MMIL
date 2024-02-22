@@ -75,36 +75,44 @@ const Name = () => {
           borderRadius: "10px",
           boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
           width: "23rem",
-          height: "16rem"
+          height: "17rem"
         }}
       >
-        <h2
+       <p
           style={{
-            fontSize: "40px",
-            marginTop: "10px",
-            marginBottom: "22px",
-            color: "white",
-            fontFamily: "Montserrat"
-          }}
-        >
-          LET'S BEGIN!
-        </h2>
-        <p
-          style={{
-            display: 'block',
-            fontSize: "18px",
-            color: "white",
+            
+            fontSize: "44px",
             fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
+            color: "white",
           }}
         >
-          What is your name ?
+          Let's BEGIN!
+        </p>
+        <p
+         style={{
+          display: "block",
+          marginLeft: "8px",
+         
+          fontSize: "18px",
+       
+          letterSpacing:"1px",
+          color: "white",
+          fontFamily: "Montserrat",
+          fontWeight:"ExtraBold",
+          marginTop: "-10px",
+          }}
+        >What is your name ?
         </p>
         <div
           style={{
             border: "1px solid #FFE454",
             borderRadius: "12px",
             padding: "6px",
-            width: "75%",
+            width: "60%",
             margin: "auto",
             marginTop: "8px",
           }}
@@ -140,7 +148,7 @@ const Name = () => {
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#009A0F":"#ffffff",
-            fontSize: "4rem",
+            fontSize: "3.8rem",
           }}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}

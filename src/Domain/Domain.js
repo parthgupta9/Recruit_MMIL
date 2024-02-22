@@ -163,17 +163,20 @@ const Name = () => {
         }}
       >
         {/* Your card content goes here */}
-        <h2
+        <p
           style={{
-            fontSize: "47px",
-            marginTop: "10px",
-            marginBottom: "22px",
+            
+            fontSize: "44px",
+            fontFamily: "Montserrat",
+            fontWeight:"ExtraBold",
+            letterSpacing:"2px",
+            height:"80px",
+            marginTop:"16px",
             color: "white",
-            fontFamily: "Montserrat"
           }}
         >
-          LET'S BEGIN!
-        </h2>
+          Let's BEGIN!
+        </p>
         <p
           style={{
             display: 'block',
@@ -277,7 +280,7 @@ const Name = () => {
           to="/Congrats"
           style={{
             display: "inline-block",
-            marginLeft: "40%",
+            marginLeft: "0%",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
