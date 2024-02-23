@@ -61,58 +61,58 @@ const App = () => {
           padding: '20px', 
           borderRadius: '10px', 
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', 
-          width:'26rem'
+          width:'23rem'
         }}
       >
         {/* Your card content goes here */}
         <h2 style={{
        
-            fontStyle:'Montserrat',marginLeft:'140px',marginBottom:'30px',color:'white'
+            fontFamily:'Montserrat',marginLeft:'40px',marginBottom:'30px',color:'white',fontWeight:'ExtraBold'
 
-        }}> Rounds  </h2>
+        }}> Rounds </h2>
           <div className="dropdown" >
         <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
-       backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem'}}>
-          <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 1</p>
+       backgroundColor:'rgba(255, 230, 223, 1)',width:'20rem'}}>
+          <p stye={{fontSize:'14px',fontWeight:'Bold',fontFamily:'Montserrat',fontWeight:'Bold'}}>Round 1</p>
           
-          <p style={{marginTop:'-23px',fontSize:'22px', fontWeight: 'bolder'}}> Aptitude Round</p>
+          <p style={{marginTop:'-20px',fontSize:'22px', fontWeight: 'ExtraBold',fontFamily:'Montserrat'}}> Aptitude Round</p>
       
-          <p style={{marginTop:'-15px',fontSize:'10px'}}>Technical and Logical based MCQs round</p>
-          <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
+          <p style={{marginTop:'-15px',fontSize:'10px',letterSpacing:'1px'}}>Technical and Logical based MCQs round.</p>
+          <img src={vector} alt='' style={{marginTop:'-42%',marginLeft:'18rem'}}></img>
         </button>
 
-        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'24rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'20rem',marginTop:'0px'
         }}>
-         <div style={{ maxHeight: "100px", overflowY: "auto" }}> 
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'60px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The students has to go to unstop.com. 
+         <div style={{  overflowY: "auto" }}> 
+        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'none',marginLeft:'20px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} >Instructions for Students</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px'}}>The students has to go to unstop.com. 
       </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>Only the registered student's result will be evaluated. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The student has to submit the test in the given time.</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'80px'}}>The link to the test is provided below.png </li>
-          <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'145px', height: '35px'}}></img> </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px'}}>Only the registered student's result will be evaluated. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px'}}>The student has to submit the test in the given time.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px'}}>The link to the test is provided below.png </li>
+          <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'45px', height: '35px'}}></img> </li>
           <li> <button style={{
-           width:'16rem',marginLeft:'60px',marginTop:'20px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'20px'
+           width:'16rem',marginLeft:'30px',marginTop:'20px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'20px'
           }}>Click here</button></li>
           </div>
         </ul>
       </div>
       <div className="dropdown" style={{marginTop:'20px'}}>
         <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
-       backgroundColor:'rgba(255, 250, 231, 1)',width:'24rem'}}>
-          <p stye={{fontSize:'14px',fontWeight:'bold'}}>Round 2</p>
+       backgroundColor:'rgba(255, 250, 231, 1)',width:'20rem'}}>
+          <p stye={{fontSize:'14px',fontWeight:'Bold',fontFamily:'Montserrat',fontWeight:'Bold'}}>Round 2</p>
           
-          <p style={{marginTop:'-23px',fontSize:'22px', fontWeight: 'bolder'}}> Technical Round</p>
+          <p style={{marginTop:'-20px',fontSize:'22px', fontWeight: 'ExtraBold',fontFamily:'Montserrat'}}> Technical Round</p>
       
-          <p style={{marginTop:'-15px',fontSize:'10px'}}>Task round to check your skills</p>
-          <img src={vector} alt='' style={{marginTop:'-32%',marginLeft:'20rem'}}></img>
+          <p style={{marginTop:'-15px',fontSize:'10px',letterSpacing:'1px'}}>Task round to check your skills.</p>
+          <img src={vector} alt='' style={{marginTop:'-42%',marginLeft:'18rem'}}></img>
         </button>
 
               <ul
                 className="dropdown-menu"
                 style={{
                   backgroundColor: "rgba(255, 250, 231, 1)",
-                  width: "24rem",
+                  width: "20rem",
                   marginTop: "0px",
                 }}
               >
@@ -121,8 +121,8 @@ const App = () => {
                   style={{
                     fontSize: "12px",
                     fontStyle: "Montserrat",
-                    listStyle: "disc",
-                    marginLeft: "60px",
+                    listStyle: "none",
+                    marginLeft: "20px",
                     fontWeight: "bold",
                     marginBottom: "4px",
                     marginTop: "4px",
@@ -136,7 +136,7 @@ const App = () => {
                     fontSize: "10px",
                     fontStyle: "Montserrat",
                     listStyle: "disc",
-                    marginLeft: "80px",
+                    marginLeft: "50px",
                   }}
                 >
                   Pay attention to details and follow the instructions provided.
@@ -146,19 +146,19 @@ const App = () => {
                     fontSize: "10px",
                     fontStyle: "Montserrat",
                     listStyle: "disc",
-                    marginLeft: "80px",
+                    marginLeft: "50px",
                   }}
                 >
                   {" "}
                   Use this opportunity to showcase your skills and approach to
-                  problem-solving.{" "}
+                  problem-solving.
                 </li>
                 <li
                   style={{
                     fontSize: "10px",
                     fontStyle: "Montserrat",
                     listStyle: "disc",
-                    marginLeft: "80px",
+                    marginLeft: "50px",
                   }}
                 >
                   The students has to complete the task in before the deadline.{" "}
@@ -168,10 +168,10 @@ const App = () => {
                     fontSize: "10px",
                     fontStyle: "Montserrat",
                     listStyle: "disc",
-                    marginLeft: "80px",
+                    marginLeft: "50px",
                   }}
                 >
-                  The link to.png{" "}
+                  The link to.png
                 </li>
                 {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
                 <li>
@@ -179,7 +179,7 @@ const App = () => {
                   <button
                     style={{
                       width: "16rem",
-                      marginLeft: "60px",
+                      marginLeft: "30px",
                       marginTop: "30px",
                       border: "1px solidrgba(255, 230, 223, 1)",
                       marginBottom: "30px",
@@ -200,46 +200,44 @@ const App = () => {
                 style={{
                   height: "100px",
                   backgroundColor: "rgba(182, 232, 255, 1)",
-                  width: "24rem",
+                  width: "20rem",
                 }}
               >
-                <p stye={{ fontSize: "14px", fontWeight: "bold" }}>Round 3</p>
+                <p stye={{ fontSize:'14px',fontWeight:'Bold',fontFamily:'Montserrat',fontWeight:'Bold' }}>Round 3</p>
 
                 <p
                   style={{
-                    marginTop: "-23px",
-                    fontSize: "22px",
-                    fontWeight: "bolder",
+                    marginTop:'-20px',fontSize:'22px', fontWeight: 'ExtraBold',fontFamily:'Montserrat'
                   }}
                 >
                   {" "}
                   HR Round
                 </p>
 
-                <p style={{ marginTop: "-15px", fontSize: "10px" }}>
-                  Personal interview and HR interview round to check your <br />{" "}
-                  personality and coordination skills.
+                <p style={{ marginTop:'-15px',fontSize:'10px'}}>
+                  Personal interview and HR interview round <br/>to check your
+                  personality skills.
                 </p>
                 <img
                   src={vector}
                   alt=""
-                  style={{ marginTop: "-32%", marginLeft: "20rem" }}
+                  style={{ marginTop: "-45%", marginLeft: "18rem" }}
                 ></img>
               </button>
 
-        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'24rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'20rem',marginTop:'0px'
         }}>
-          <div style={{ maxHeight: "100px", overflowY: "auto" }}>
-        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
+          <div style={{ overflowY: "auto" }}>
+        <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'none',marginLeft:'20px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'30px',marginRight:'10px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
       </li>
 
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}> interviewer will focus on different aspects of your skills and experience. </li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Be ready to discuss specific examples from your past experience that demonstrate your skills,problem-solving abilities, and teamwork.</li>
-          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'65px'}}>Please have a copy of your resume for reference.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'30px',marginRight:'10px'}}> interviewer will focus on different aspects of your skills and experience. </li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'30px',marginRight:'10px'}}>Be ready to discuss specific examples from your past experience that demonstrate your skills,problem-solving abilities, and teamwork.</li>
+          <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'30px',marginRight:'10px'}}>Please have a copy of your resume for reference.</li>
           {/* <li> <img src={unstop} alt='' style={{marginTop:'20px',marginLeft:'120px'}}></img> </li> */}
           <li> <button style={{
-           width:'16rem',marginLeft:'60px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
+           width:'16rem',marginLeft:'20px',marginTop:'30px',border:'1px solidrgba(255, 230, 223, 1)',marginBottom:'30px'
           }}>Click here</button></li>
           </div>
         </ul>
@@ -274,7 +272,9 @@ const App = () => {
           border: 'none',
           borderRadius: '5px',
           cursor: 'pointer',
-          width:'24rem'
+          width:'23rem',
+          fontFamily:'Montserrat',
+          fontWieght:'Bold'
         }}
       ><Link to="/First" style={{textDecoration: 'none', color: isHovering ? '#FFE454' : '#000000',}}  onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}> Register</Link>
