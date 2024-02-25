@@ -12,6 +12,7 @@ import Email from './Email/Email';
 import Phone from './Phone/Phone';
 import Domain from './Domain/Domain';
 import Congrats from './congrats/Congrats';
+import RocketLoader from './RocketLoader/RocketLoader';
 import { useUser } from './Context';
 
 const App = () => {
@@ -56,6 +57,7 @@ const App = () => {
             <Route path="/Phone" element={<Phone />} />
             <Route path="/Domain" element={<Domain />} />
             <Route path="/Congrats" element={<Congrats />} />
+            <Route path="/RocketLoader" element={<RocketLoader />} />
           </Routes>
         </BrowserRouter>
       </div>

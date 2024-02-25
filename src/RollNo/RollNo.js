@@ -5,7 +5,8 @@ import tick from "../assets/Frame 13.png";
 import { Link } from "react-router-dom";
 import { useUser } from '../Context';
 import "../style.css";
-import appbg from "../assets/bg-app.svg";
+import appbg from "../assets/bg-app.svg"; 
+import RocketLoader from '../RocketLoader/RocketLoader';
 
 const Name = () => {
   const { userData, setUserData } = useUser();
@@ -20,6 +21,21 @@ const Name = () => {
 
   const [tickmark, showTickmark] = useState(false);
   const [isHoverTickmark, setHoverTickmark] = useState(false);
+
+  const [tickmarkClicked, setTickmarkClicked] = useState(false);
+  const [showRocketLoader, setShowRocketLoader] = useState(false); // State to control RocketLoader visibility
+  const handleTickmarkClick = () => {
+    setTickmarkClicked(true);
+    setShowRocketLoader(true); // Show the RocketLoader when tickmark is clicked
+  
+    if (windowSize.width <= 900) {
+      setTimeout(() => {
+        window.location.href = "/Branch"; 
+      }, 1200);
+    } else {
+      window.location.href = "/Branch"; 
+    }
+  };
 
   const handleHoverTickmark = () => {
    setHoverTickmark(true);
@@ -136,26 +152,24 @@ const Name = () => {
         />
         </div>
 
-        <Link
-          to="/Branch"
+        {/* <Link to="/Branch"> */}
+             <i class="fa-solid fa-circle-check"
           style={{
+            color: isHoverTickmark?"#FFE454":"#ffffff",
+            fontSize: "4.2rem",
             display: "inline-block",
             marginLeft: "auto",
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
-        >
-             <i class="fa-solid fa-circle-check"
-          style={{
-            color: isHoverTickmark?"#FFE454":"#ffffff",
-            fontSize: "4.2rem"
-          }}
+          onClick={handleTickmarkClick}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
               onTouchStart={handleHoverTickmark} // Trigger hover effect on touch
           onTouchEnd={handleUnHoverTickmark}
           ></i>
-        </Link>
+        {/* </Link> */}
+        {showRocketLoader && <RocketLoader />}
 
         <img
           src={mmil}
