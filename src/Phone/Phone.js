@@ -128,6 +128,7 @@ const Name = () => {
               borderBottom: "1px solid #FFE454",
               padding: "6px",
               color: "white",
+              outline: 'none',
             }}
             type="email"
             value={userData.phoneNo}

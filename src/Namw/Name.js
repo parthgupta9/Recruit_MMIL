@@ -26,22 +26,6 @@ const Name = () => {
   const [tickmark, showTickmark] = useState(false);
   const [isHoverTickmark, setHoverTickmark] = useState(false);
 
-  const [tickmarkClicked, setTickmarkClicked] = useState(false);
-  const [showRocketLoader, setShowRocketLoader] = useState(false); // State to control RocketLoader visibility
-  const handleTickmarkClick = () => {
-    setTickmarkClicked(true);
-    setShowRocketLoader(true); // Show the RocketLoader when tickmark is clicked
-  
-    if (windowSize.width <= 900) {
-      setTimeout(() => {
-        window.location.href = "/RollNo"; 
-      }, 1200);
-    } else {
-      window.location.href = "/RollNo"; 
-    }
-  };
-  
-
   const handleHoverTickmark = () => {
    setHoverTickmark(true);
   };
@@ -98,7 +82,6 @@ const Name = () => {
       >
        <p
           style={{
-            
             fontSize: "44px",
             fontFamily: "Montserrat",
             fontWeight:"ExtraBold",
@@ -113,10 +96,8 @@ const Name = () => {
         <p
          style={{
           display: "block",
-          marginLeft: "8px",
-         
-          fontSize: "18px",
-       
+          marginLeft: "8px",         
+          fontSize: "18px",       
           letterSpacing:"1px",
           color: "white",
           fontFamily: "Montserrat",
@@ -145,6 +126,7 @@ const Name = () => {
               borderBottom: "1px solid #FFE454",
               padding: "6px",
               color: "white",
+              outline: 'none',
             }}
             type="text"
             value={userData.name}
@@ -154,7 +136,7 @@ const Name = () => {
             aria-label="type here"
           />
         </div>
-        {/* <Link to="/RollNo"> */}
+        <Link to="/RollNo"> 
              <i class="fa-solid fa-circle-check"
           style={{
             color: isHoverTickmark?"#FFE454":"#ffffff",
@@ -164,14 +146,13 @@ const Name = () => {
             marginTop: "24px",
             opacity: tickmark ? '1' : '0',
           }}
-          onClick={handleTickmarkClick}
+          // onClick={handleTickmarkClick}
           onMouseEnter={handleHoverTickmark}
           onMouseLeave={handleUnHoverTickmark}
               onTouchStart={handleHoverTickmark} // Trigger hover effect on touch
           onTouchEnd={handleUnHoverTickmark}
           ></i>
-        {/* </Link> */}
-        {showRocketLoader && <RocketLoader />}
+        </Link>
 
         <img
           src={mmil}

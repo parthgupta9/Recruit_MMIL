@@ -121,8 +121,7 @@ const Name = () => {
           }}
         >
           <input
-            className="form"
-            
+            className="form"            
             style={{
               width: "100%",
               border: "none",
@@ -130,6 +129,7 @@ const Name = () => {
               borderBottom: "1px solid #FFE454",
               padding: "6px",
               color: "white",
+              outline: 'none',
             }}
             type="email"
             value={userData.email}
