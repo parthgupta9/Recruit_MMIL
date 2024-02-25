@@ -61,15 +61,15 @@ const App = () => {
           padding: '20px', 
           borderRadius: '10px', 
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.3)', 
-          width:'23rem'
+          width:'23rem',
+          // height: '27.5rem',
         }}
       >
         {/* Your card content goes here */}
-        <h2 style={{
-       
+        <h2 style={{       
             fontFamily:'Montserrat',marginLeft:'40px',marginBottom:'30px',color:'white',fontWeight:'ExtraBold'
-
         }}> Rounds </h2>
+
           <div className="dropdown" >
         <button className="btn " type="button" data-bs-toggle="dropdown" aria-expanded="false" style={{height:'80px',
        backgroundColor:'rgba(255, 230, 223, 1)',width:'20rem'}}>
@@ -81,9 +81,9 @@ const App = () => {
           <img src={vector} alt='' style={{marginTop:'-42%',marginLeft:'18rem'}}></img>
         </button>
 
-        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'20rem',marginTop:'0px'
+        <ul className="dropdown-menu" style={{ backgroundColor:'rgba(255, 230, 223, 1)',width:'20rem',marginTop:'0px',
         }}>
-         <div style={{  overflowY: "auto" }}> 
+         <div style={{  overflowY: "auto", maxHeight: "100px" }}> 
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'none',marginLeft:'20px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} >Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'50px'}}>The students has to go to unstop.com. 
       </li>
@@ -227,7 +227,7 @@ const App = () => {
 
         <ul className="dropdown-menu" style={{ backgroundColor:'rgba(182, 232, 255, 1)',width:'20rem',marginTop:'0px'
         }}>
-          <div style={{ overflowY: "auto" }}>
+          <div style={{ overflowY: "auto", maxHeight: "80px" }}>
         <li style={{fontSize:'12px',fontStyle:'Montserrat',listStyle:'none',marginLeft:'20px', fontWeight:'bold',marginBottom:'4px',marginTop:'4px'}} > Instructions for Students</li>
           <li style={{fontSize:'10px',fontStyle:'Montserrat',listStyle:'disc',marginLeft:'30px',marginRight:'10px'}}>Your interview is scheduled for [Date Yet to announce] at [Time Yet to announce]. Please ensure you are available at least 10 minutes before the scheduled time.
       </li>
@@ -251,8 +251,8 @@ const App = () => {
             marginTop:'-20%',
             top: '-12%',
             left: '30%',
-            width: '50%',
-            height: '24%',
+            width: '52%',
+            height: '22%',
             objectFit: 'cover', // Adjust as needed
             borderRadius: '10px', // Adjust as needed
             opacity: 1, // Adjust as needed
