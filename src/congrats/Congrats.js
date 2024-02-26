@@ -27,6 +27,10 @@ const Name = () => {
     };
   }, []);
 
+  setTimeout(() => {
+    window.location.href = "/Register"; 
+  }, 2000); 
+
   return (
     <div style={{ position: "relative" }}>
           <img
