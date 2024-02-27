@@ -1,0 +1,292 @@
+
+.main img{
+    width: 100vw;
+    height: 170vh;
+    background-size: cover;
+    background-position: center;
+
+    
+}
+#first img{
+    top: 5%;
+    position: absolute;
+    left:40%;
+    height: 15%;
+    width: 17%;
+}
+.domains{
+    width: 474px; /* Adjust width as needed */
+    height: 55px;
+   border: 1px solid white;
+   top: 21%;
+   left: 30%;
+   position: absolute;
+   border-radius: 16px;
+}
+
+.fields ul{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    list-style: none;
+    margin-top: 2%;
+}
+
+.fields ul li{
+   margin-left: -2%;
+   margin-right: 4%;
+}
+.container{
+    border: 1px solid white;
+    border-radius: 2px;
+    height: 622px;
+    width: 464px;
+    top: 35%;
+    position: absolute;
+    left: 30%;
+}
+.rounds{
+    margin-top: 1%;
+    color: white;
+    font-size: 30px;
+    margin-top: 8%;
+  
+}
+.rounds p{
+    font-family: Montserrat;
+}
+
+.instructions{
+    margin-top: 4%;
+    border: 1px solid black;
+    background-color:rgba(255, 250, 231, 1);
+    color: black;
+    height: 322px;
+    width: 435px;
+    top:143px;
+    position: absolute;
+    left: 14px;
+    border-radius: 10px;
+}
+
+.instructions p{
+font-size: 12px;
+font-weight: 600;
+letter-spacing: 0em;
+
+}
+
+.instructions h6{
+    font-size: 10px;
+    margin-top: -8px;
+}
+
+.instructions h1{
+    font-size: 24px;
+    font-family: Montserrat;
+    margin-top: -12px;
+}
+
+.instructions h5{
+    font-size: 15px;
+    margin-top: 7%;
+    margin-left: -20%;
+    font-weight: 400;
+}
+.instructions ul{
+    font-size: 12px;
+   text-align: left;
+
+
+}
+.instructions ul li{
+    margin-left: 50px;
+    text-align: left;
+    
+}
+.button{
+    height: 26px;
+    width: 265px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+    
+}
+.button a{
+    text-decoration: none;
+}
+
+
+
+.webdev{
+ 
+    border: 1px solid black;
+    background-color:rgba(255, 250, 231, 1);
+    color: black;
+    height: 525px;
+    width: 435px;
+    top:83px;
+    position: absolute;
+    left: 14px;
+    border-radius: 10px;
+}
+
+.webdev p{
+font-size: 12px;
+font-weight: 500;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin-top: 2%;
+}
+
+.webdev h6{
+    font-size: 10px;
+    margin-top: -8px;
+}
+
+.webdev h1{
+    font-size: 24px;
+    font-family: Montserrat;
+    margin-top: -19px;
+}
+
+.webdev h5{
+    font-size: 15px;
+    margin-top: 7%;
+    margin-left: -20%;
+    font-weight: 400;
+}
+.webdev ul{
+    font-size: 12px;
+   text-align: left;
+
+
+}
+.webdev ul li{
+    margin-left: 50px;
+    text-align: left;
+    
+}
+
+
+.details{
+        border: 1px solid rgba(29, 29, 29, 1);
+            border-Radius: 12px;
+            padding: 6px;
+            width:255px;
+            height: 29px;
+            margin: auto;
+            margin-top: 10%;
+           
+}
+.details input{
+    width: 100%;
+              border: none;
+              background: none;
+              
+              border-Bottom: 1px solid rgba(29, 29, 29, 1);
+              top:40%;
+              padding: 6px;
+              color: white;
+              font-size: 8px;
+           
+}
+.details p{
+ width: 10vw;
+height: 9px;
+left: 16%;
+position: absolute;
+top: 43%;
+font-weight: 400;
+
+}
+
+.website{
+    width: 40%px;
+height: 9px;
+left: 3px;
+font-size: 8px;
+
+}
+@media screen and (max-width: 900px) {
+    .main img{
+        height: 100vh;
+    }
+    #first img   {
+      top: 10%; /* Adjust as needed for smaller screens */
+      left: 33%; /* Adjust as needed for smaller screens */
+      height: 10%;
+      width: 30%;
+    }
+     .domains{
+        left: 10%;
+        width:305px;
+        height: 45px;
+    }
+    .fields ul li{
+        font-size: 12px;
+        margin-top: 4px;
+      
+        
+    }
+    .container{
+        margin-left: -20%;
+        width: 305px;
+        height: 539px;
+        
+    }
+  
+    .instructions{
+        margin-top: 20%;
+        height: 249px;
+        width: 271px;
+        border-radius: 20px;
+    }
+    .instructions p{
+        width: 51px;
+      height: 15px;
+     top: 6px;
+     left: 111px;
+   position: absolute;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       
+    }
+   .instructions h1{
+    margin-top: 8%;
+    font-size: 1.3rem;
+   }
+   .instructions h6{
+    font-size: 8px;
+   }
+   .instructions h5{
+    width: 80vw;
+height: 15px;
+top: 71px;
+left: 8%;
+font-weight: 500;
+position: absolute;
+font-size: 12px;
+   }
+   .instructions ul{
+    width: 80vw;
+    top: 110px;
+    position: absolute;
+    margin-left: -15%;
+    font-size: 8px;
+  
+   }
+  .button {
+    margin-top: 18vh;
+    height: 14px;
+    width: 171px;
+    
+  }
+  .button a {
+    font-size: 8px;
+    top:212px;
+    left: 110px;
+    position: absolute;
+    
+  }
+
+  }
