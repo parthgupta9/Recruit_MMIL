@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Splashscreen from './splashscreen/Splashscreen';
 import Rocket from './Rocket/Rocket';
 import Register from './Register/Register';
-import Resume from './Resume/Resume';
+import Resume from './Resume/Resumeee';
 import FirstSlide from './ques/FirstSlide';
 import Name from './Namw/Name';
 import RollNo from './RollNo/RollNo';
