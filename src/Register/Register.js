@@ -14,12 +14,19 @@ const App = () => {
     });
 
     const [expandedCard, setExpandedCard] = useState(null);
-    const [displayStyle, setDisplayStyle] = useState('none');
+    const [heightMainCard, setHeightMainCard] = useState('');
+    const [positionTop, setPositionTop] = useState('83%');
+    const [direction, setDirection] = useState('right');
+    const [positionMainTop, setPositionMainTop] = useState('50%');
 
     const handleCardClick = (cardName) => {
         setExpandedCard(cardName === expandedCard ? null : cardName);
-        setDisplayStyle(displayStyle === 'none' ? 'block' : 'none');
+        setHeightMainCard(cardName === expandedCard ? '' : '34rem');
+        setPositionTop(cardName === expandedCard ? '83%' : '105%');
+        setDirection(cardName === expandedCard ? 'right' : 'down');
+        setPositionMainTop(cardName === expandedCard ? '50%' : '60%');
     };
+
 
     const updateWindowSize = () => {
         setWindowSize({
@@ -38,17 +45,22 @@ const App = () => {
     return (
         <>
             <div>
-                <div style={{ position: 'relative'}}>
+                <div style={{ position: 'relative' }}>
                     <img
                         src={windowSize.width <= 900 ? appbg : bg}
                         alt="Your Image"
                         style={{
                             width: windowSize.Width < 900 ? "100vw" : "100vw",
-                            height: windowSize.Width < 900 ? "100vh" : "100vh",
+                            height: windowSize.Width < 900 ? "115vh" : "100vh",
                             objectFit: "cover",
                         }}
                     />
-                    <div className={`card ${expandedCard === "card" ? "expanded" : ""}`} onClick={() => handleCardClick("card")}>
+                    <div
+                        className='card'
+                        style={{
+                            height: heightMainCard,
+                            top: positionMainTop,
+                        }}>
                         <h2
                             style={{
                                 fontFamily: 'Montserrat',
@@ -59,62 +71,83 @@ const App = () => {
                             }}>
                             Rounds
                         </h2>
-                        <div className="aptitude sub-card">
+                        <div className={`aptitude sub-card ${expandedCard === "aptitude" ? "expanded-aptitude" : ""}`} onClick={() => handleCardClick("aptitude")} >
                             <div>
                                 <p className="roundNo">Round 1</p>
                                 <p className="roundName">Aptitude Round</p>
                                 <p className="roundDescription">Technical and Logical based MCQs round.</p>
-                                <div class='aptitude-expanded expanded-text' style={{ display: displayStyle }}>
+                                <div 
+                                class='aptitude-expanded expanded-list' 
+                                style={{ display: expandedCard === "aptitude" ? "block" : "none" }}
+                                >
                                     <ul>
                                         <li class='instructions'>Instruction for Students</li>
-                                        <li> Pay attention to details and follow the <br /> instructions provided.</li>
-                                        <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
-                                        <li> The students has to complete the task <br /> before the deadline.</li>
+                                        <li>The students has to go to unstop.com. </li>
+                                        <li>Only the registered student's result will <br /> be evaluated.</li>
+                                        <li>The student has to submit the test in <br /> the given time.</li>
                                         <li>The link to the task has been provided below.</li>
-                                        <li><button className="click"><a href="">Click here</a></button></li>
+                                        <li style={{ listStyle: 'none', }}> <img src={unstop} alt='' style={{ margin: '10px', height: '30px' }}></img> </li>
+                                        <li style={{ listStyle: 'none', }}><button className="click"><a href="">Click here</a></button></li>
                                     </ul>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-chevron-right arrow-right1"></i>
+                            <i 
+                            className={`fa-solid fa-chevron-${expandedCard === "aptitude" ? "down" : "right"}`}
+                            style={{position: 'absolute',right: '40px',}}
+                            ></i>
                         </div>
-                        <div className={`technical sub-card ${expandedCard === "technical" ? "expanded" : ""}`} onClick={() => handleCardClick("technical")}>
+                        <div className={`technical sub-card ${expandedCard === "technical" ? "expanded-technical" : ""}`} onClick={() => handleCardClick("technical")} >
                             <div>
                                 <p className="roundNo">Round 2</p>
                                 <p className="roundName">Technical Round</p>
                                 <p className="roundDescription">Task round to check your skills.</p>
-                                <div class='technical-expanded expanded-text' style={{ display: displayStyle }}>
+                                <div 
+                                class='technical-expanded expanded-list' 
+                                style={{ display: expandedCard === "technical" ? "block" : "none" }}
+                                >
                                     <ul>
                                         <li class='instructions'>Instruction for Students</li>
                                         <li> Pay attention to details and follow the <br /> instructions provided.</li>
                                         <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
                                         <li> The students has to complete the task <br /> before the deadline.</li>
                                         <li>The link to the task has been provided below.</li>
-                                        <li><button className="click"><a href="">Click here</a></button></li>
+                                        <li style={{ listStyle: 'none', }}><button className="click"><a href="">Click here</a></button></li>
                                     </ul>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-chevron-right arrow-right2"></i>
+                            <i className={`fa-solid fa-chevron-${expandedCard === "technical" ? "down" : "right"}`} style={{position: 'absolute',right: '40px'}}></i>
                         </div>
-                        <div className="interview sub-card">
+                        <div className={`interview sub-card ${expandedCard === "interview" ? "expanded-interview" : ""}`} onClick={() => handleCardClick("interview")}>
                             <div>
                                 <p className="roundNo">Round 3</p>
                                 <p className="roundName">HR Round</p>
                                 <p className="roundDescription">Personal interview and HR interview round <br /> to check your personality  and coordination skills.</p>
-                                <div class='interview-expanded expanded-text' style={{ display: displayStyle }}>
+                                <div 
+                                class='interview-expanded expanded-list'
+                                style={{ display: expandedCard === "interview" ? "block" : "none" }}
+                                 >
                                     <ul>
                                         <li class='instructions'>Instruction for Students</li>
-                                        <li> Pay attention to details and follow the <br /> instructions provided.</li>
-                                        <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
-                                        <li> The students has to complete the task <br /> before the deadline.</li>
-                                        <li>The link to the task has been provided below.</li>
-                                        <li><button className="click"><a href="">Click here</a></button></li>
-                                    </ul>
+                                        <li>Your interview is scheduled for [Date Yet to <br /> announce] at [Time Yet to announce]. Please <br /> ensure you are available at least 10 minutes <br /> before the scheduled time.</li>
+                                        <li>Interviewer will focus on different aspects of <br /> your skills and experience. </li>
+                                        <li>Be ready to discuss specific examples from <br /> your past experience that demonstrate your <br /> skills, problem-solving abilities, and teamwork.</li>
+                                        <li>Please have a copy of your resume for <br /> reference.</li>
+                                      </ul>
                                 </div>
                             </div>
-                            <i class="fa-solid fa-chevron-right arrow-right3"></i>
+                            <i className={`fa-solid fa-chevron-${expandedCard === "interview" ? "down" : "right"}`} style={{position: 'absolute',right: '40px', }}></i>
                         </div>
                     </div>
-                    <Link to="/First" className='link'>Register Now</Link>
+                    <img
+          src={mmil}
+          alt="Overlay Image"
+          className='mmil-logo'
+        />
+                    <Link
+                        to="/First"
+                        className='link'
+                        style={{ top: positionTop }}
+                    >Register Now</Link>
                 </div>
             </div>
         </>
