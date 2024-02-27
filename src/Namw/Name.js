@@ -21,13 +21,11 @@ const Name = () => {
     height: window.innerHeight,
   });
 
-
-
   const [tickmark, showTickmark] = useState(false);
   const [isHoverTickmark, setHoverTickmark] = useState(false);
 
   const handleHoverTickmark = () => {
-   setHoverTickmark(true);
+    setHoverTickmark(true);
   };
   const handleUnHoverTickmark = () => {
     setHoverTickmark(false);
@@ -55,7 +53,7 @@ const Name = () => {
   return (
     <div style={{ position: "relative" }}>
       <img
-         src={windowSize.width <= 900 ? appbg : bg}
+        src={windowSize.width <= 900 ? appbg : bg}
         alt="Your Image"
         style={{
           width: windowSize.Width < 900 ? "100vw" : "100vw", // Adjust as needed
@@ -80,29 +78,29 @@ const Name = () => {
           height: "17rem"
         }}
       >
-       <p
+        <p
           style={{
             fontSize: "44px",
             fontFamily: "Montserrat",
-            fontWeight:"ExtraBold",
-            letterSpacing:"2px",
-            height:"80px",
-            marginTop:"16px",
+            fontWeight: "ExtraBold",
+            letterSpacing: "2px",
+            height: "80px",
+            marginTop: "16px",
             color: "white",
           }}
         >
           Let's BEGIN!
         </p>
         <p
-         style={{
-          display: "block",
-          marginLeft: "8px",         
-          fontSize: "18px",       
-          letterSpacing:"1px",
-          color: "white",
-          fontFamily: "Montserrat",
-          fontWeight:"ExtraBold",
-          marginTop: "-10px",
+          style={{
+            display: "block",
+            marginLeft: "8px",
+            fontSize: "18px",
+            letterSpacing: "1px",
+            color: "white",
+            fontFamily: "Montserrat",
+            fontWeight: "ExtraBold",
+            marginTop: "-10px",
           }}
         >What is your name ?
         </p>
@@ -136,21 +134,20 @@ const Name = () => {
             aria-label="type here"
           />
         </div>
-        <Link to="/RollNo"> 
-             <i class="fa-solid fa-circle-check"
-          style={{
-            color: isHoverTickmark?"#FFE454":"#ffffff",
-            fontSize: "4.2rem",
-            display: "inline-block",
-            marginLeft: "auto",
-            marginTop: "24px",
-            opacity: tickmark ? '1' : '0',
-          }}
-          // onClick={handleTickmarkClick}
-          onMouseEnter={handleHoverTickmark}
-          onMouseLeave={handleUnHoverTickmark}
-              onTouchStart={handleHoverTickmark} // Trigger hover effect on touch
-          onTouchEnd={handleUnHoverTickmark}
+        <Link to="/RollNo">
+          <i class="fa-solid fa-circle-check"
+            style={{
+              color: isHoverTickmark ? "#FFE454" : "#ffffff",
+              fontSize: "4.2rem",
+              display: "inline-block",
+              marginLeft: "auto",
+              marginTop: "24px",
+              opacity: tickmark ? '1' : '0',
+            }}
+            onMouseEnter={handleHoverTickmark}
+            onMouseLeave={handleUnHoverTickmark}
+            onTouchStart={handleHoverTickmark}
+            onTouchEnd={handleUnHoverTickmark}
           ></i>
         </Link>
 
@@ -164,7 +161,7 @@ const Name = () => {
             left: "30%",
             width: "46%",
             height: "35%",
-            opacity: 1, 
+            opacity: 1,
           }}
         />
       </div>
