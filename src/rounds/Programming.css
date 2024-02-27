@@ -1,0 +1,40 @@
+.mainCard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #666666,#4d4d4d, #262626, #1a1a1a, #0d0d0d);
+    padding: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 23rem;
+}
+.mainHeading{
+    font-size: 38px;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    letter-spacing: 2px;
+    height: 80px;
+    margin-top: 16px;
+    color: #fff;
+}
+.card{
+    background-color: #FFFAE7;
+    color: #000;
+}
+.roundNo{
+    font-weight: 500;  
+    margin: 0; 
+    font-size: 14px; 
+}
+.roundName{
+    font-family: "Montserrat";
+    letter-spacing: 0;
+    font-size: 22px;
+    margin: 0;  
+}
+.roundDescription{
+    font-size: 10px;
+    margin: 0;
+}

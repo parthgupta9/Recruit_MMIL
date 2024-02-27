@@ -12,6 +12,9 @@ import Email from './Email/Email';
 import Phone from './Phone/Phone';
 import Domain from './Domain/Domain';
 import Congrats from './congrats/Congrats';
+import Design from './rounds/Design';
+import Webdev from './rounds/Webdev';
+// import Programming from './rounds/Programming';
 import RocketLoader from './RocketLoader/RocketLoader';
 import { useUser } from './Context';
 
@@ -57,6 +60,9 @@ const App = () => {
             <Route path="/Phone" element={<Phone />} />
             <Route path="/Domain" element={<Domain />} />
             <Route path="/Congrats" element={<Congrats />} />
+            <Route path="/Design" element={<Design />} />
+            <Route path="/Webdev" element={<Webdev />} />
+            {/* <Route path="/Programming" element={<Programming />} /> */}
             <Route path="/RocketLoader" element={<RocketLoader />} />
           </Routes>
         </BrowserRouter>

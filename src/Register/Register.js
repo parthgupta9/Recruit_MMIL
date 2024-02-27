@@ -81,7 +81,7 @@ const App = () => {
                                 style={{ display: expandedCard === "aptitude" ? "block" : "none" }}
                                 >
                                     <ul>
-                                        <li class='instructions'>Instruction for Students</li>
+                                        <li class='instructionsStudents'>Instruction for Students</li>
                                         <li>The students has to go to unstop.com. </li>
                                         <li>Only the registered student's result will <br /> be evaluated.</li>
                                         <li>The student has to submit the test in <br /> the given time.</li>
@@ -106,7 +106,7 @@ const App = () => {
                                 style={{ display: expandedCard === "technical" ? "block" : "none" }}
                                 >
                                     <ul>
-                                        <li class='instructions'>Instruction for Students</li>
+                                        <li class='instructionsStudents'>Instruction for Students</li>
                                         <li> Pay attention to details and follow the <br /> instructions provided.</li>
                                         <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
                                         <li> The students has to complete the task <br /> before the deadline.</li>
@@ -127,7 +127,7 @@ const App = () => {
                                 style={{ display: expandedCard === "interview" ? "block" : "none" }}
                                  >
                                     <ul>
-                                        <li class='instructions'>Instruction for Students</li>
+                                        <li class='instructionsStudents'>Instruction for Students</li>
                                         <li>Your interview is scheduled for [Date Yet to <br /> announce] at [Time Yet to announce]. Please <br /> ensure you are available at least 10 minutes <br /> before the scheduled time.</li>
                                         <li>Interviewer will focus on different aspects of <br /> your skills and experience. </li>
                                         <li>Be ready to discuss specific examples from <br /> your past experience that demonstrate your <br /> skills, problem-solving abilities, and teamwork.</li>
