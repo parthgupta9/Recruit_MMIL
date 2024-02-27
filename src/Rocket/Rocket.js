@@ -83,7 +83,7 @@ const App = () => {
 
         <h2
           style={{
-            marginLeft: "26px",
+            // marginLeft: "26px",
             fontSize: "40px",
             fontFamily: "Montserrat",
             fontWeight:"ExtraBold",
@@ -98,7 +98,7 @@ const App = () => {
         <p
           style={{
             display: "block",
-            marginLeft: "18px",         
+            // marginLeft: "18px",         
             fontSize: "18px",        
             letterSpacing:"3px",
             color: "white",
@@ -115,7 +115,7 @@ const App = () => {
             backgroundColor: isHovering ? "#009A0F" : "#FFE454",
             height: "44px",
             width: "124px",
-            marginLeft: "7%",
+            // marginLeft: "7%",
             border: "none",
             borderRadius: "10px",
             // marginTop: "-10px",
