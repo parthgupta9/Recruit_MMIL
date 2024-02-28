@@ -12,7 +12,7 @@ const Design = () => {
         <img
           src={window.innerWidth <= 900 ? appbg : bg}
           style={{
-            height:window.innerWidth < 900 ? "125vh" : "170vh",
+            height:window.innerWidth < 900 ? "149vh" : "170vh",
           }}
           alt="Your Image"
         />
