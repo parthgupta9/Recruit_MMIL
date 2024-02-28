@@ -271,7 +271,7 @@ color: #0D99FF;
 
     .instructions {
         margin-top: -20%;
-        height: 310px;
+        height: 320px;
         width: 271px;
         border-radius: 20px;
         padding: 6px;
@@ -293,7 +293,8 @@ color: #0D99FF;
     }
 
     .webdev {
-        width: 74vw;
+        /* width: 74vw; */
+        width: 284px;
     }
 
 }
