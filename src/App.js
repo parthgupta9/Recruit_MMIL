@@ -14,7 +14,9 @@ import Domain from './Domain/Domain';
 import Congrats from './congrats/Congrats';
 import Technical from './rounds/Technical';
 import Webdev from './rounds/Webdev';
-// import Programming from './rounds/Programming';
+import Design from './rounds/Design';
+import Programming from './rounds/Programming';
+import Android from './rounds/Android';
 import RocketLoader from './RocketLoader/RocketLoader';
 import { useUser } from './Context';
 
@@ -62,6 +64,9 @@ const App = () => {
             <Route path="/Congrats" element={<Congrats />} />
             <Route path="/Technical" element={<Technical />} />
             <Route path="/Webdev" element={<Webdev />} />
+            <Route path="/Design" element={<Design />} />
+            <Route path="/Programming" element={<Programming />} />
+            <Route path="/Android" element={<Android />} />
             <Route path="/RocketLoader" element={<RocketLoader />} />
           </Routes>
         </BrowserRouter>

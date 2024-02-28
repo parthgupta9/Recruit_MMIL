@@ -41,10 +41,10 @@ const Design = () => {
             <h6 className='task'>Task round to check your skills</h6>
             <h5>Instructions for Students</h5>
             <ul>
-              <li>The contest will be held on Hackerrank.com .</li>
-              <li>It will be of 2.5 hours and will contain 5 questions. </li>
-              <li>The contest timing will be from 4pm to 6:30pm <br /> IST on 15-04-24.</li>
-              <li>Please sign up on Hackerank.com  <br />before attempting the quiz.</li>
+              <li>You are required to choose ANY ONE task from <a href=""> here</a>. </li>
+              <li> The task deadline is 1pm IST on 16-04-2023. </li>
+              <li>The students has to complete the task in before the deadline.</li>
+              <li>Task should be submitted below.</li>
             </ul>
             <h5>Details to be filled by Students.</h5>
             <form action="">
@@ -60,12 +60,19 @@ const Design = () => {
                   required
                 />
               </div>
-              <p
-              style={{
-                marginTop: '4rem',
-                marginBottom: '4rem'
-              }} 
-              ><a href="">Click here</a> to go the contest page.</p>
+              <label htmlFor="textInput">Figma/Adobe Xd Link*</label>
+              <div className='inputBox'>
+                <input
+                  id="textInput"
+                  className="form"
+                  formMethod="POST"
+                  type="text"
+                  placeholder="Paste here"
+                  aria-label="type here"
+                  required
+                />
+              </div>
+              <button className="submit">Submit</button>
             </form>
           </div>
         </div>
