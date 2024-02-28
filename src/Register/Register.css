@@ -67,7 +67,6 @@
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* transform: translate(-50%, 375%); */
     padding: 10px;
     font-weight: bolder;
     border-radius: 14px;
@@ -86,7 +85,7 @@
 }
 .expanded-list{
     margin: 0;
-    font-size: 8px;
+    font-size: 10px;
     display: none;
     z-index: 999;
 }

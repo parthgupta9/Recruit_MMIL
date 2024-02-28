@@ -150,7 +150,7 @@ const App = () => {
               display: "inline-block",
               marginLeft: "auto",
               marginTop: "24px",
-              opacity: tickmark ? '1' : '0',
+              display: tickmark? 'inline-block' : 'none',
             }}
             onMouseEnter={handleHoverTickmark}
             onMouseLeave={handleUnHoverTickmark}

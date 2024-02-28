@@ -93,7 +93,7 @@ const App = () => {
                             </div>
                             <i 
                             className={`fa-solid fa-chevron-${expandedCard === "aptitude" ? "down" : "right"}`}
-                            style={{position: 'absolute',right: '40px',}}
+                            style={{position: 'absolute',right: '34px',}}
                             ></i>
                         </div>
                         <div className={`technical sub-card ${expandedCard === "technical" ? "expanded-technical" : ""}`} onClick={() => handleCardClick("technical")} >
@@ -111,11 +111,11 @@ const App = () => {
                                         <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
                                         <li> The students has to complete the task <br /> before the deadline.</li>
                                         <li>The link to the task has been provided below.</li>
-                                        <li style={{ listStyle: 'none', }}><button className="click"><a href="">Click here</a></button></li>
+                                        <li style={{ listStyle: 'none', }}><button className="click"><a href="/Technical">Click here</a></button></li>
                                     </ul>
                                 </div>
                             </div>
-                            <i className={`fa-solid fa-chevron-${expandedCard === "technical" ? "down" : "right"}`} style={{position: 'absolute',right: '40px'}}></i>
+                            <i className={`fa-solid fa-chevron-${expandedCard === "technical" ? "down" : "right"}`} style={{position: 'absolute',right: '34px'}}></i>
                         </div>
                         <div className={`interview sub-card ${expandedCard === "interview" ? "expanded-interview" : ""}`} onClick={() => handleCardClick("interview")}>
                             <div>
@@ -135,7 +135,7 @@ const App = () => {
                                       </ul>
                                 </div>
                             </div>
-                            <i className={`fa-solid fa-chevron-${expandedCard === "interview" ? "down" : "right"}`} style={{position: 'absolute',right: '40px', }}></i>
+                            <i className={`fa-solid fa-chevron-${expandedCard === "interview" ? "down" : "right"}`} style={{position: 'absolute',right: '34px', }}></i>
                         </div>
                     </div>
                     <img

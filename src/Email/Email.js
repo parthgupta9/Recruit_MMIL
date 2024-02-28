@@ -145,7 +145,7 @@ const Name = () => {
             display: "inline-block",
             marginLeft: "0%",
             marginTop: "24px",
-            opacity: tickmark ? '1' : '0',
+            display: tickmark? 'inline-block' : 'none',
           }}
         >
                <i class="fa-solid fa-circle-check"
