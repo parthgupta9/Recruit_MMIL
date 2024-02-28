@@ -12,6 +12,9 @@ const Technical = () => {
       <div className='technical-main'>
         <img
           src={window.innerWidth <= 900 ? appbg : bg}
+          style={{
+            height:window.innerWidth < 900 ? "105vh" : "170vh",
+          }}
           alt="Your Image"
         />
       </div>

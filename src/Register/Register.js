@@ -45,13 +45,13 @@ const App = () => {
     return (
         <>
             <div>
-                <div style={{ position: 'relative' }}>
+                <div className='contain'>
                     <img
                         src={windowSize.width <= 900 ? appbg : bg}
-                        alt="Your Image"
+                        alt="Your Image" id='imagess'
                         style={{
                             width: windowSize.Width < 900 ? "100vw" : "100vw",
-                            height: windowSize.Width < 900 ? "115vh" : "100vh",
+                            height: windowSize.Width < 900 ? "115vh" : "120vh",
                             objectFit: "cover",
                         }}
                     />

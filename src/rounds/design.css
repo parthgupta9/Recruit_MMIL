@@ -6,7 +6,7 @@
 }
 .technical-main img{
     width: 100vw;
-    height: 110vh;
+    height: 130vh;
     background-size: cover;
     background-position: center;
 }
@@ -271,7 +271,7 @@ color: #0D99FF;
 
     .instructions {
         margin-top: -20%;
-        height: 320px;
+        height: 310px;
         width: 271px;
         border-radius: 20px;
         padding: 6px;
@@ -293,8 +293,7 @@ color: #0D99FF;
     }
 
     .webdev {
-        /* width: 74vw; */
-        width: 284px;
+        width: 74vw;
     }
 
 }

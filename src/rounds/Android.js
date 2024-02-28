@@ -11,6 +11,9 @@ const Design = () => {
       <div className='main'>
         <img
           src={window.innerWidth <= 900 ? appbg : bg}
+          style={{
+            height:window.innerWidth < 900 ? "125vh" : "170vh",
+          }}
           alt="Your Image"
         />
       </div>
@@ -27,7 +30,7 @@ const Design = () => {
           <ul>
             <li className='design'><a href="/Design">Design</a></li>
             <li><a href="/Programming">Programming</a></li>
-            <li><a href="/Webdev">Web Dev</a></li>
+            <li><a href="/Webdev">Web-Dev</a></li>
             <li><a href="/Android">Android</a></li>
           </ul>
         </div>
