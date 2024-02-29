@@ -21,8 +21,8 @@ const App = () => {
 
     const handleCardClick = (cardName) => {
         setExpandedCard(cardName === expandedCard ? null : cardName);
-        setHeightMainCard(cardName === expandedCard ? '' : '34rem');
-        setPositionTop(cardName === expandedCard ? '83%' : '105%');
+        setHeightMainCard(cardName === expandedCard ? '' : '36rem');
+        setPositionTop(cardName === expandedCard ? '88%' : '105%');
         setDirection(cardName === expandedCard ? 'right' : 'down');
         setPositionMainTop(cardName === expandedCard ? '50%' : '60%');
     };
@@ -108,14 +108,17 @@ const App = () => {
                                     <ul>
                                         <li class='instructionsStudents'>Instruction for Students</li>
                                         <li> Pay attention to details and follow the <br /> instructions provided.</li>
-                                        <li> Use this opportunity to showcase your skills <br /> and approach to problem-solving.</li>
+                                        <li> Use this opportunity to showcase your <br /> skills and approach to problem-solving.</li>
                                         <li> The students has to complete the task <br /> before the deadline.</li>
                                         <li>The link to the task has been provided below.</li>
                                         <li style={{ listStyle: 'none', }}><button className="click"><a href="/Technical">Click here</a></button></li>
                                     </ul>
                                 </div>
                             </div>
-                            <i className={`fa-solid fa-chevron-${expandedCard === "technical" ? "down" : "right"}`} style={{position: 'absolute',right: '34px'}}></i>
+                            <i 
+                            className={`fa-solid fa-chevron-${expandedCard === "technical" ? "down" : "right"}`}
+                            style={{position: 'absolute',right: '34px',}}
+                            ></i>
                         </div>
                         <div className={`interview sub-card ${expandedCard === "interview" ? "expanded-interview" : ""}`} onClick={() => handleCardClick("interview")}>
                             <div>
@@ -128,14 +131,16 @@ const App = () => {
                                  >
                                     <ul>
                                         <li class='instructionsStudents'>Instruction for Students</li>
-                                        <li>Your interview is scheduled for [Date Yet to <br /> announce] at [Time Yet to announce]. Please <br /> ensure you are available at least 10 minutes <br /> before the scheduled time.</li>
+                                        <li>Your interview is scheduled for [Date Yet to <br /> announce] at [Time Yet to announce]. Please <br /> ensure you are available at least <br /> 10 minutes before the scheduled time.</li>
                                         <li>Interviewer will focus on different aspects of <br /> your skills and experience. </li>
                                         <li>Be ready to discuss specific examples from <br /> your past experience that demonstrate your <br /> skills, problem-solving abilities, and teamwork.</li>
                                         <li>Please have a copy of your resume for <br /> reference.</li>
                                       </ul>
                                 </div>
                             </div>
-                            <i className={`fa-solid fa-chevron-${expandedCard === "interview" ? "down" : "right"}`} style={{position: 'absolute',right: '34px', }}></i>
+                            <i className={`fa-solid fa-chevron-${expandedCard === "interview" ? "down" : "right"}`} 
+                            style={{position: 'absolute',right: '34px', }}
+                            ></i>
                         </div>
                     </div>
                     <img

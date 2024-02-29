@@ -20,13 +20,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .domains {
     width: 474px;
     height: 55px;
     border: 1px solid white;
-    top: 21%;
+    top: 25.5%;
     left: 30%;
     position: absolute;
     border-radius: 16px;
@@ -48,6 +49,7 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
+    letter-spacing: 0px;
 }
 
 .fields ul li:first-child:hover, .fields ul li:first-child:active{

@@ -33,12 +33,16 @@
     text-align: center;
     padding: 5px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 20.5rem;
 }
 .sub-card:hover{
     cursor: pointer;
+}
+.fa-solid{
+    
 }
 .roundNo{
     font-weight: 500;  
@@ -98,12 +102,14 @@
 .expanded-list ul{
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .instructionsStudents{
     margin-top: 5px;
     font-size: 12px;
     font-weight: bold;
     list-style: none;
+    margin-right: 18px;
 }
 .sub-card ul li button{
     border-radius: 5px;
@@ -122,6 +128,6 @@
 
 @media screen and (max-width: 900px){
     .link{
-        margin-top: 20px;
+        margin-top: 50px;
     }
 }

@@ -18,12 +18,12 @@ const Design = () => {
         />
       </div>
       <div id='first'>
-
+      <a href="/Register">
         <img
           src={mmil}
           alt="Overlay Image"
-
         />
+        </a>
       </div>
       <div className='domains'>
         <div className='fields'>
