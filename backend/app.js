@@ -12,7 +12,7 @@ require('./db/connect')
 // const MMIL = require('./models/FormData');
 
 app.use(cors(
-    origin:[],
+    origin:["https://mmil-recruits.netlify.app"],
         methods:["POST","GET"],
         credentials:true
 ));
