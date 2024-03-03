@@ -119,7 +119,7 @@ const Name = () => {
   useEffect(() => {
     if (tickmark && userData.domain) {
       // All necessary data is available and tickmark is pressed, so save the data
-      fetch('http://localhost:5000/name', {
+      fetch('recruit-mmil-a6wt.vercel.app/name', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
