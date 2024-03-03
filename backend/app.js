@@ -11,7 +11,11 @@ dotenv.config({path:'./config.env'});
 require('./db/connect')
 // const MMIL = require('./models/FormData');
 
-app.use(cors());
+app.use(cors(
+    origin:[],
+        methods:["POST","GET"],
+        credentials:true
+));
 
 app.use(express.json())
 
