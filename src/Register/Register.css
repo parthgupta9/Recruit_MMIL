@@ -125,7 +125,9 @@
 .expanded{
     height: 33rem;
 }
-
+.card-link{
+    text-decoration: none;
+}
 @media screen and (max-width: 900px){
     .link{
         margin-top: 50px;

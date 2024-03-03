@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import appbg from "../assets/bg-app.svg";
 import './Register.css';
 
+
 const App = () => {
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
@@ -96,7 +97,9 @@ const App = () => {
                             style={{position: 'absolute',right: '34px',}}
                             ></i>
                         </div>
+                        <Link to="/Technical" className='card-link'>
                         <div className={`technical sub-card ${expandedCard === "technical" ? "expanded-technical" : ""}`} onClick={() => handleCardClick("technical")} >
+                         
                             <div>
                                 <p className="roundNo">Round 2</p>
                                 <p className="roundName">Technical Round</p>
@@ -120,6 +123,7 @@ const App = () => {
                             style={{position: 'absolute',right: '34px',}}
                             ></i>
                         </div>
+                        </Link>
                         <div className={`interview sub-card ${expandedCard === "interview" ? "expanded-interview" : ""}`} onClick={() => handleCardClick("interview")}>
                             <div>
                                 <p className="roundNo">Round 3</p>

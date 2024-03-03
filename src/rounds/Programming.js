@@ -28,8 +28,8 @@ const Design = () => {
       <div className='domains'>
         <div className='fields'>
           <ul>
-            <li className='design'><a href="/Design">Design</a></li>
-            <li><a href="/Programming">Programming</a></li>
+            <li className='design' ><a href="/Design">Design</a></li>
+            <li className='programming'><a href="/Programming">Programming</a></li>
             <li><a href="/Webdev">Web-Dev</a></li>
             <li><a href="/Android">Android</a></li>
           </ul>

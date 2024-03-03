@@ -27,7 +27,7 @@
     width: 474px;
     height: 55px;
     border: 1px solid white;
-    top: 25.5%;
+    top: 24%;
     left: 30%;
     position: absolute;
     border-radius: 16px;
@@ -55,16 +55,27 @@
 .fields ul li:first-child:hover, .fields ul li:first-child:active{
     border-bottom: 2px solid  #FB0707;
 }
+#des{
+    border-bottom: 2px solid  #FB0707;
+}
 .fields ul li:nth-child(2):hover, .fields ul li:nth-child(2):active{
+    border-bottom: 2px solid #FFE454;
+}
+.programming{
     border-bottom: 2px solid #FFE454;
 }
 .fields ul li:nth-child(3):hover, .fields ul li:nth-child(3):active{
     border-bottom: 2px solid #0D99FF;
 }
+.web{
+    border-bottom: 2px solid #0D99FF;
+}
 .fields ul li:nth-child(4):hover, .fields ul li:nth-child(4):active{
     border-bottom: 2px solid #32C766;
 }
-
+.and{
+    border-bottom: 2px solid #32C766;
+}
 .container {
     border: 1px solid white;
     border-radius: 10px;
@@ -235,6 +246,13 @@ color: #0D99FF;
     font-size: 8px;
 
 }
+
+form:valid .submit {
+    background-color: #7BFD88;
+  }
+  form:valid .submit:hover {
+    background-color: #FFFFFF;
+  }
 
 @media screen and (max-width: 900px) {
     .main img {

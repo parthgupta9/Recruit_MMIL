@@ -31,7 +31,7 @@ const Design = () => {
             <li className='design'><a href="/Design">Design</a></li>
             <li><a href="/Programming">Programming</a></li>
             <li><a href="/Webdev">Web-Dev</a></li>
-            <li><a href="/Android">Android</a></li>
+            <li className='and'><a href="/Android">Android</a></li>
           </ul>
         </div>
       </div>

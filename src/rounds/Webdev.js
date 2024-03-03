@@ -30,7 +30,7 @@ const Design = () => {
           <ul>
             <li className='design'><a href="/Design">Design</a></li>
             <li><a href="/Programming">Programming</a></li>
-            <li><a href="/Webdev">Web-Dev</a></li>
+            <li className='web'><a href="/Webdev">Web-Dev</a></li>
             <li><a href="/Android">Android</a></li>
           </ul>
         </div>
